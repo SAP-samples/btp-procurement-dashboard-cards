@@ -1,0 +1,39 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          width="100%"
+          displayBlock="true"
+          controllerName="sap.ariba.MyContractWorkspacesAPI.Main">
+   <Table items="{contracts>/value}" busy="{oViewModel>/busy}">
+        <headerToolbar>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button
+                    tooltip="Refresh"
+                    icon="sap-icon://refresh"
+                    press="handleRefreshButtonPressed"/>
+            </OverflowToolbar>
+        </headerToolbar>
+        <columns>
+            <Column width="35%"><Text text="Contract" /></Column>
+            <Column><Text text="Owner" /></Column>
+            <Column><Text text="Supplier" /></Column>
+            <Column><Text text="Status" /></Column>
+            <Column><Text text="Creation Date" /></Column>
+        </columns>
+        <items>
+            <ColumnListItem
+                    type="Active"
+                    press="onListItemPress">
+                <cells>
+                    <ObjectIdentifier title="{contracts>ContractId}" text="{contracts>Title}" class="sapUiTinyMarginTopBottom" />
+                    <Text text="{contracts>Owner_UserId}" />
+                    <Text text="{contracts>Suppliers}" />
+                    <Text text="{contracts>ContractStatus}" />
+                    <Text text="{path: 'contracts>CreationDate_day', formatter: '.formatDate'}" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</mvc:View>

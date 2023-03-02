@@ -1,0 +1,31 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+>
+
+    <Table items="{invoices>/value}" busy="{oViewModel>/busy}">
+        <columns>
+            <Column width='25%'><Text text="Invoice No" /></Column>
+            <Column><Text text="Invoice Date" /></Column>
+            <Column><Text text="PO Id" /></Column>
+            <Column><Text text="Supplier Id" /></Column>
+            <Column><Text text="Commodity Id" /></Column>
+            <Column><Text text="Reconciliation Status" /></Column>
+        </columns>
+        <items>
+            <ColumnListItem
+                    type="Active"
+                    press="onListItemPress">
+                <cells>
+                    <ObjectIdentifier title="{invoices>InvoiceId}" text="{invoices>Description}" class="sapUiTinyMarginTopBottom" />
+                    <Text text="{path: 'invoices>InvoiceDate_day', formatter: '.formatDate'}" />
+                    <Text text="{invoices>POId}" />
+                    <Text text="{invoices>Supplier_SupplierId}" />
+                    <Text text="{invoices>Commodity_CommodityId}" />
+                    <ObjectStatus text="{invoices>ReconciliationStatus}" 
+                         state="{=${invoices>ReconciliationStatus} === 'Paid'  ? 'Success' : ${invoices>ReconciliationStatus} === 'Paying'  ? 'Warning' : ${invoices>ReconciliationStatus} === 'Reconciled'? 'Warning':'Error'}" />
+                     </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</core:FragmentDefinition>

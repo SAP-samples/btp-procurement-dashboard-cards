@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.MediaCustomCard",
+		"type": "card",
+		"title": "Generic Media Custom Card",
+		"subTitle": "Access a specific URL",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

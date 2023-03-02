@@ -1,0 +1,111 @@
+{
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "sap.ariba.MyConsumedContracts",
+		"type": "card",
+		"title": "My Contracts Consumption",
+		"subTitle": "My Top 5 contracts about to be consumed",
+		"applicationVersion": {
+			"version": "1.0.1"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://table-view"
+		}
+	},
+	"sap.card": {
+		"type": "Table",
+        "designtime": "dt/configuration",
+		"header": {
+			"title": "Contract Consumption",
+			"subTitle": "Top 5 contracts about to be consumed",
+			"icon": {
+				"src": "sap-icon://decision"
+			}
+        },
+        "data": {
+            "request": {
+                "method": "GET",
+                "url": "{{destinations.wzcd}}/getMyConsumedContracts()?realm={{parameters.realm}}&user={{parameters.user}}",  
+                "withCredentials": true
+            }
+		},
+        "configuration": {
+             "parameters": {
+                "realm": {
+                    "value": "<realmName>",
+                    "type": "string",
+					"label": "Realm",
+					"description": "The realm to connect to."
+                },
+                "datacenter": {
+                    "value": "s1",
+                    "type": "string", 
+					"label": "Datacenter",
+					"description": "The datacenter the realm belongs to (ie: s1 for us, s1-eu for eu...) "
+                },
+                "user": {
+                    "value": "",
+                    "type": "string",
+					"label": "User ID",
+					"description": "For Test purpose only"
+                }
+            },
+            "destinations": {
+                "wzcd": {
+                    "name": "Work-Zone-Cards-Data"
+                }
+            }
+        },
+		"content": {
+            "data": {
+                "path": "/value/"
+            },
+			"row": {
+				"columns": [
+                    {
+						"title": "ContractId",
+						"value": "{ContractId}",
+                        "identifier": true,
+                        "actions": [
+                            {
+                                "type": "Navigation",
+                                "parameters": {
+                                     "url": "https://{{parameters.datacenter}}.ariba.com/Sourcing/Main/ad/viewDocument?ID={ContractId}&realm={{parameters.realm}}"
+                                }
+                            }
+                        ]
+                       
+                    },
+                    {
+                        "title": "Description",
+                        "value": "{Description}"
+                    },
+                    {
+                        "title": "Amount Percent Left",
+                        "value": "{AmountPercentLeft} %",
+                        "state": "{=${AmountPercentLeft} >= 50 ?'Success':${AmountPercentLeft} >= 25?'Warning':'Error'}"
+                    },
+                    {
+                        "title": "Duration",
+                        "value": "{Duration} days"
+                    },
+                    {
+                        "title": "Amount Left",
+                        "value": "{AmountLeft} {OrigCurrencyCode}"
+                    },
+                    {
+                        "title": "Expiration Day",
+                        "value": "{ExpirationDate_day}"
+                    }
+				]
+			}
+		}
+	},
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

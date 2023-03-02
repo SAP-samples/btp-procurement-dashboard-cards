@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.MyPendingInvoices",
+		"type": "card",
+		"title": "My Pending Invoices",
+		"subTitle": "My last 10 pending Invoice Items",
+		"artifactVersion": {
+			"version": "1.0.1"
+		}
+	}
+}

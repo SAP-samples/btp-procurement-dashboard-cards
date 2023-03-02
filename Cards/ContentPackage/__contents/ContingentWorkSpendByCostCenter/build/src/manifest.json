@@ -1,0 +1,97 @@
+{
+	"_version": "1.14.0",
+	"sap.app": {
+		"id": "sap.fieldglass.ContingentWorkSpendByCostCenter",
+		"type": "card",
+		"title": "Contingent Work",
+		"subTitle": "Spend By Cost Center",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://full-stacked-column-chart"
+		}
+	},
+	"sap.card": {
+		"type": "Analytical",
+        "designtime": "dt/configuration",
+		"header": {
+            "title": "Contingent Work",
+            "subTitle": "Spend by Cost Center",
+			"icon": {
+				"src": "sap-icon://work-history"
+			}
+        },
+        "data": {
+            "request": {
+                "method": "GET",
+                "url": "{{destinations.myDestination}}/{{parameters.report}}",
+                "withCredentials": true
+            }
+		},
+        "configuration": {
+            "parameters": {
+                "report": {
+                    "value": "report_SpendbyCCKQ/SpendbyCCKQs",
+                    "type": "string",
+					"label": "Report",
+					"description": "The report to execute."
+                }
+            },
+            "destinations": {
+                "myDestination": {
+                    "name": "fieldglass-data-hub"
+                }
+            }
+        },
+		"content": {
+			"chartType": "StackedColumn",
+			"legend": {
+				"visible": true,
+				"position": "Bottom",
+				"alignment": "TopLeft"
+			},
+			"plotArea": {
+				"dataLabel": {
+					"visible": false,
+					"showTotal": true
+				},
+				"categoryAxisText": {
+					"visible": false
+				},
+				"valueAxisText": {
+					"visible": false
+				}
+			},
+			"title": {
+				"text": "Column chart",
+				"visible": false,
+				"alignment": "Left"
+			},
+			"measureAxis": "valueAxis",
+            "dimensionAxis": "categoryAxis",
+            "data": {
+                "path": "/value/"
+            },
+			"dimensions": [
+				{
+					"label": "Cost Center",
+					"value": "{cost_center}"
+				}
+			],
+			"measures": [
+				{
+					"label": "Spend",
+					"value": "100000"
+				}
+			]
+		}
+	},
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

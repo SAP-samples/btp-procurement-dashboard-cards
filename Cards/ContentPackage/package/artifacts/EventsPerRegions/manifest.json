@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.EventsPerRegions",
+		"type": "card",
+		"title": "Sourcing Events per Regions",
+		"subTitle": "In SAP Ariba Sourcing Events",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

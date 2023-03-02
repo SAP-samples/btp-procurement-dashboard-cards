@@ -1,0 +1,35 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+>
+    <List growing="true"
+		growingThreshold="5"
+		growingScrollToLoad="false" id="tblSuppliers" 
+        headerText="Suppliers({=${viewData>/value}.length})" 
+        items="{path: 'viewData>/value'}"
+        busy="{oViewModel>/busy}"
+        >
+        <CustomListItem>
+            <HBox justifyContent="SpaceBetween" wrap="Wrap">
+                <HBox width="60%">
+                    <Avatar class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" 
+                    backgroundColor="Random" 
+                    initials="{=${viewData>SupplierName}.charAt(0)}" displaySize="S" displayShape="Circle"/>
+                    <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+                        <Link text="{viewData>SupplierName}" href="{oViewModel>/supplierSearchLink}" target="_blank"/>
+                        <Label text="{viewData>City},{viewData>State},{viewData>Country}"/>
+                    </VBox>
+                </HBox>
+                <VBox width="20%" class="sapUiSmallMarginTopBottom">
+                    <Label text="Diversity Type"/>
+                    <Text text="{viewData>DivCategory}"/>
+                </VBox>
+                <VBox width="20%"  class="sapUiSmallMarginTopBottom">
+                    <Label text="Vendor ID"/>
+                    <Text text="{viewData>SupplierId}"/>
+                </VBox>
+            </HBox>				
+        </CustomListItem>
+    </List>
+
+</core:FragmentDefinition>

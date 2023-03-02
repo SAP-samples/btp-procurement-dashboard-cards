@@ -1,0 +1,28 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+>
+
+    <Table items="{contracts>/value}" busy="{oViewModel>/busy}">
+        <columns>
+            <Column><Text text="Contract" /></Column>
+            <Column><Text text="Owner" /></Column>
+            <Column><Text text="Supplier" /></Column>
+            <Column><Text text="Status" /></Column>
+            <Column><Text text="Expiration Date" /></Column>
+        </columns>
+        <items>
+            <ColumnListItem
+                    type="Active"
+                    press="onListItemPress">
+                <cells>
+                    <ObjectIdentifier title="{contracts>ProjectId}" text="{contracts>Description}" class="sapUiTinyMarginTopBottom" />
+                    <Text text="{contracts>Owner_UserId}" />
+                    <Text text="{contracts>Suppliers}" />
+                    <Text text="{contracts>ContractStatus}" />
+                    <Text text="{path: 'contracts>ExpirationDate_day', formatter: '.formatDate'}" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</core:FragmentDefinition>

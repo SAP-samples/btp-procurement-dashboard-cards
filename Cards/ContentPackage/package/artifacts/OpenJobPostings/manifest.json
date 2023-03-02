@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.fieldglass.OpenJobPostings",
+		"type": "card",
+		"title": "Open Job Postings",
+		"subTitle": "Open job posting in SAP Fieldglass",
+		"artifactVersion": {
+			"version": "1.0.1"
+		}
+	}
+}

@@ -1,0 +1,67 @@
+{
+	"_version": "1.17.0",
+	"sap.app": {
+		"id": "sap.ariba.GBCatalogSearch",
+		"type": "card",
+		"title": "Catalog Search",
+		"subTitle": "In Sap Ariba Guided Buying",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://product"
+		}
+	},
+	"sap.card": {
+        "extension": "./extension/GBCatalogSearchExtension",
+        "header": {
+			"title": "SAP Ariba Guided Buying Catalog Search",
+			"subTitle": "Search in the SAP Ariba Catalog",
+			"icon": { "src": "sap-icon://search" }
+		},
+        "configuration": { 
+            "parameters": {
+                "datacenter": {
+                    "value": "",
+                    "type": "string",
+					"label": "datacenter",
+					"description": "The datacenter suffixe (keep empty for US,-eu for eu... "
+                },
+                "realm": {
+                    "value": "<realmName>",
+                    "type": "string",
+					"label": "Realm",
+					"description": "The realm to use in the API calls."
+                }
+            }
+		},
+        "type": "AdaptiveCard",
+        "designtime": "dt/configuration",
+        "content": {
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "type": "AdaptiveCard",
+            "version": "1.0",
+            "body": [
+                {
+                    "type": "Input.Text",
+                    "placeholder": "Catalog Search Term",
+                    "style": "text",
+                    "id": "CatSearch"
+                }
+            ],
+            "actions": [
+                {
+                    "type": "Action.Submit",
+                    "title": "Search"
+                }
+            ]
+        }
+    },
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

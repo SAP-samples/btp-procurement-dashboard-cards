@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.MySpendPerQuarter",
+		"type": "card",
+		"title": "My Spend Per Quarter",
+		"subTitle": "Last 4 quarters",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

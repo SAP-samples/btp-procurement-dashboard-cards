@@ -1,0 +1,41 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:fb="sap.ui.comp.filterbar"
+>
+    <fb:FilterBar id="filterbar" reset="onReset" search="onSearch" useToolbar="false" clear="onClear"
+                                    showGoOnFB="true" showFilterConfiguration="false" showClearOnFB="true">
+        <fb:filterGroupItems>
+            
+            
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="C" label="Supplier Name" partOfCurrentVariant="true" visibleInFilterBar="true">
+                <fb:control>
+                    <SearchField id="searchField" value="{oViewModel>/searchString}" search="onSearch"/>                  
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="D" label="Diversity Type" partOfCurrentVariant="true" visibleInFilterBar="true">
+                <fb:control>
+                    <ComboBox id="slDType" selectedKey="{oViewModel>/diversityTypeFilter}">
+                        <core:Item key="" text=""/>
+                        <core:Item key="DiversityDVO" text="Disabled Veteran Owned"/>
+                        <core:Item key="DiversityGreen" text="Green Initiatives"/>
+                        <core:Item key="DiversityGLBTOwned" text="LGBT Owned"/>
+                        <core:Item key="MinorityOwned" text="Minority Owned"/>
+                        <core:Item key="DiversitySDB" text="Small Disadvantaged"/>
+                        <core:Item key="VeteranOwned" text="Veteran Owned"/>
+                        <core:Item key="VietnamVO" text="Vietnam Veteran Owned"/>
+                        <core:Item key="WomanOwned" text="Woman Owned"/>
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="B" label="Country" partOfCurrentVariant="true" visibleInFilterBar="true">
+                <fb:control>
+
+                    <ComboBox id="slLocation" items="{codelist>/countries}" selectedKey="{oViewModel>/countryFilter}">
+                        <core:Item key="{codelist>Key}" text="{codelist>Name}"/>								
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+        </fb:filterGroupItems>
+    </fb:FilterBar>
+</core:FragmentDefinition>

@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.fieldglass.ContingentWorkSpendByCostCenter",
+		"type": "card",
+		"title": "Contingent Work",
+		"subTitle": "Spend By Cost Center",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

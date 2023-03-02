@@ -1,0 +1,74 @@
+{
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "sap.fieldglass.OpenJobPostings",
+		"type": "card",
+		"title": "Open Job Postings",
+		"subTitle": "Open job posting in SAP Fieldglass",
+		"applicationVersion": {
+			"version": "1.0.1"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+            "icon": "sap-icon://list"
+        }
+	},
+    "sap.card": {
+        "type": "List",
+        "designtime": "dt/configuration",
+        "header": {
+            "title": "Open Job Postings",
+            "subTitle": "Last 5 job postings",
+            "icon": {
+                "src": "sap-icon://work-history"
+            }
+        },
+        "data": {
+            "request": {
+                "url": "{{destinations.myDestination}}/{{parameters.report}}",
+                "parameters": {
+                    "$top": 5
+                },
+                "withCredentials": true
+            }
+        },
+        "configuration": {
+            "parameters": {
+                "report": {
+                    "value": "report_OpenPositions/OpenPositionss",
+                    "type": "string",
+					"label": "Report",
+					"description": "The report to execute."
+                }
+            },
+            "destinations": {
+                "myDestination": {
+                    "name": "fieldglass-data-hub"
+                }
+            }
+        },
+        "content": {
+            "data": {
+                "path": "/value/"
+            },
+            "item": {
+                "title": "{job_posting_id_job_posting_report}",
+                "description": "Company code: {company_code_job_template_report}",
+                "icon": {
+                    "src": "{=${labor_type} === '#label.healthcare#'?'sap-icon://stethoscope' : (${labor_type} === '#label.industrial#'?'sap-icon://icon-refinery':'sap-icon://technical-object')}"
+                },
+                "info": {
+                    "value": "{=${labor_type} === '#label.healthcare#'?'Healthcare' : (${labor_type} === '#label.industrial#'?'Industrial':'Technical')}",
+                    "state": "{=${labor_type} === '#label.healthcare#'?'Success' : (${labor_type} === '#label.industrial#'?'Warning':'Error')}"
+                }
+            }
+        }
+    },
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+
+}

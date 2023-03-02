@@ -1,0 +1,18 @@
+{
+	"name": "sap-ariba-InvoiceExceptions",
+	"version": "1.0.0",
+	"description": "Sample project structure for a card artifact that will be included into a content package",
+	"scripts": {
+		"start": "ui5 serve -o test/manual/index.html",
+		"eslint": "eslint src"
+	},
+	"repository": {
+		"type": "",
+		"url": "",
+		"directory": ""
+	},
+	"devDependencies": {
+	},
+	"author": "",
+	"license": ""
+}

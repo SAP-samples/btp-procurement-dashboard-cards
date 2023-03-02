@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.SupplierParticipation",
+		"type": "card",
+		"title": "Supplier Participation",
+		"subTitle": "In SAP Ariba Sourcing Events",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

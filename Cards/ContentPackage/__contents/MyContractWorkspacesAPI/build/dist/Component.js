@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/UIComponent"],function(e){"use strict";var a=e.extend("sap.ariba.MyContractWorkspacesAPI.Component",{onCardReady:function(e){this.card=e;e.getCombinedParameters();e.getManifestEntry("/sap.card")}});return a});

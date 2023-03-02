@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.InvoicebyStatus",
+		"type": "card",
+		"title": "Invoice By Status",
+		"subTitle": "Based on SAP Ariba Invoices",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

@@ -1,0 +1,88 @@
+{
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "sap.ariba.ProcurementContractSearch",
+		"type": "card",
+		"title": "Procurement Contract Search",
+		"subTitle": "Contract Workspaces",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://search"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.ariba.ProcurementContractSearch.View",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.38",
+			"libs": {
+				"sap.m": {}
+			}
+		}
+	},
+	"sap.card": {
+		"type": "Component",
+        "designtime": "dt/configuration",
+        "configuration": {
+            "parameters": {
+                "realm": {
+                    "value": "<realmName>",
+                    "type": "string",
+                    "label": "The realm to connect to."
+                },
+                "datacenter": {
+                    "value": "s1",
+                    "type": "string",
+                    "label": "The datacenter the realm belongs to (ie: s1 for us, s1-eu for eu...)"
+                },
+                "searchResult": {
+                    "value": 5,
+                    "type": "integer",
+                    "label": "Amount of Records displayed as the Search Result"
+                },
+                "user": {
+                    "value": "",
+                    "type": "string",
+                    "label": "UserID for selection on 'Select Mine' (For Test purpose only)",
+					"description": "For Test purpose only"
+                },
+                "commodities": {
+                    "value": "[{\"CommodityName\":\"Coffee and Tea\",\"CommodityCode\":\"502017\"},{\"CommodityName\":\"Software\",\"CommodityCode\":\"4323\"}]",
+                    "type": "string",
+                    "label": "Code List Commodity for the realm",
+					"description": "Code List Commodity for the realm."
+                },
+                "departments": {
+                    "value": "[{\"ID\":\"14\",\"Function\":\"Global Operations\"},{\"ID\":\"15\",\"Function\":\"Marketing\"}]",
+                    "type": "string",
+                    "label": "Code List Departments for the realm",
+					"description": "Code List Departments for the realm."
+                }
+            },
+            "destinations": {
+                "wzcd": { "name": "Work-Zone-Cards-Data" }
+            }
+        },
+        "header": {
+            "icon": {
+                "src": "sap-icon://search"
+            },
+            "title": "Procurement Contract Search",
+            "subTitle": "Based on SAP Ariba Contract Workspaces"
+           
+        }
+    },
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

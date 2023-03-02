@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.CreateContractWorkspace",
+		"type": "card",
+		"title": "Create Contract Workspace",
+		"subTitle": "SAP Ariba ",
+		"artifactVersion": {
+			"version": "1.0.1"
+		}
+	}
+}

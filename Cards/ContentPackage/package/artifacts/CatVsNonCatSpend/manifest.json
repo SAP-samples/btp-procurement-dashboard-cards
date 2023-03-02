@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.CatVsNonCatSpend",
+		"type": "card",
+		"title": "Catalogue vs Non-Catalogue Spend",
+		"subTitle": "Based on Purchase Orders",
+		"artifactVersion": {
+			"version": "1.0.1"
+		}
+	}
+}

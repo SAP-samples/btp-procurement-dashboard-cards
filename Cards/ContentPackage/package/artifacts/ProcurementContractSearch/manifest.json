@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.ProcurementContractSearch",
+		"type": "card",
+		"title": "Procurement Contract Search",
+		"subTitle": "Contract Workspaces",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

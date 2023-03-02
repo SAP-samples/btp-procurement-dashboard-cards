@@ -1,0 +1,128 @@
+{
+	"_version": "1.14.0",
+	"sap.app": {
+		"id": "sap.ariba.CatVsNonCatSpend",
+		"type": "card",
+		"title": "Catalogue vs Non-Catalogue Spend",
+		"subTitle": "Based on Purchase Orders",
+		"applicationVersion": {
+			"version": "1.0.1"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://donut-chart"
+		}
+	},
+	"sap.card": {
+		"type": "Analytical",
+        "designtime": "dt/configuration",
+		"header": {
+            "type": "Numeric",
+            "title": "Catalog vs Non Catalog Spend",
+            "subTitle": "Based on SAP Ariba Purchase Orders",
+            "mainIndicator": {
+                "number": "{PercentageCatalogSpend}",
+                "unit": "%",                
+                "state": "{State}"
+            },
+            "sideIndicators": [
+                {
+                    "title": "Target",
+                    "number": "{{parameters.target}}",
+                    "unit": "%"
+                },
+                {
+                    "title": "Deviation",
+                    "number": "{Deviation}",
+                    "unit": "%"
+                }]
+        },
+        "data": {
+            "request": {
+                "method": "GET",
+                "url": "{{destinations.wzcd}}/getCatalogVsNonCatalogSpend()?realm={{parameters.realm}}&fromDate={{parameters.fromDate}}&reportingCurrency={{parameters.reportingCurrency}}&target={{parameters.target}}",
+                "withCredentials": true
+            }
+        },
+        "configuration": {
+            "parameters": {
+                "realm": {
+                    "value": "<realmName>",
+                    "type": "string",
+					"label": "Realm",
+					"description": "The realm to connect to."
+                },
+                "fromDate": {
+                    "value": "2021-01-01T00:00:00Z",
+                    "type": "string",
+					"label": "fromDate",
+					"description": "The date for which to check PO data. (ie: 2020-01-01T00:00:00Z from 2020)"
+                },
+                "target": {
+                    "value": "75",
+                    "type": "string",
+					"label": "target",
+					"description": "The target percentage of Catalog spend volume"
+                },
+                "reportingCurrency": {
+                    "value": "EUR",
+                    "type": "string",
+					"label": "Reporting Currency",
+					"description": "The realm default"
+                }
+            },
+            "destinations": {
+                "wzcd": {
+                    "name": "Work-Zone-Cards-Data"
+                }
+            }
+        },
+		"content": {
+			"chartType": "Donut",
+			"legend": {
+				"visible": true,
+				"position": "Top",
+				"alignment": "Center"
+            },
+            
+			"plotArea": {
+                
+				"dataLabel": {
+					"visible": true,
+					"showTotal": true
+				}
+            },
+            "scales":[{
+                "feed":"color"
+            }],
+			"title": {
+				"text": "Donut chart",
+				"visible": false,
+				"alignment": "Left"
+			},
+			"measureAxis": "size",
+			"dimensionAxis": "color",
+			"data": {
+				"path": "/Spends"
+			},
+			"dimensions": [
+				{
+					"label": "Type",
+					"value": "{Type}"
+				}
+			],
+			"measures": [
+				{
+					"label": "TotalAmount",
+					"value": "{TotalAmount}"
+				}
+			]
+		}
+	},
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

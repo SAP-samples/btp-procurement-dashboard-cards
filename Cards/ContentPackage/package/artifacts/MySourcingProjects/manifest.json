@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.MySourcingProjects",
+		"type": "card",
+		"title": "My Sourcing Projects",
+		"subTitle": "Last 5 sourcing projects",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

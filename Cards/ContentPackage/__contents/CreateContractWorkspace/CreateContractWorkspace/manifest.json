@@ -1,0 +1,167 @@
+{
+	"_version": "1.17.0",
+	"sap.app": {
+		"id": "sap.ariba.CreateContractWorkspace",
+		"type": "card",
+		"title": "Create Contract Workspace",
+		"subTitle": "SAP Ariba ",
+		"applicationVersion": {
+			"version": "1.0.1"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://product"
+		}
+	},	
+	"sap.card": {
+        "extension": "./extension/CreateContractWorkspaceExtension",
+		"header": {
+			"title": "Create Contract Workspace",
+			"subTitle": "Create Contract Workspace in Ariba",
+			"icon": { "src": "sap-icon://form" }
+		},
+		"type": "AdaptiveCard",
+        "designtime": "dt/configuration",
+        "data": {
+            "extension": {
+				"method": "getData"
+			}
+        },
+        "configuration": {
+            "parameters": {
+                "username": {
+                    "value": "",
+                    "type": "string",
+					"label": "Username",
+					"description": "The username to use in the API calls. Test purpose only."
+                },
+                "realm": {
+                    "value": "<realmName>",
+                    "type": "string",
+					"label": "Realm",
+					"description": "The realm to use in the API calls."
+                },
+                "templateId": {
+                    "value": "CW2219870",
+                    "type": "string",
+					"label": "Contract Workspace Template",
+					"description": "Contract Workspace Template to use in the API calls."
+                },
+                "currency": {
+                    "value": "EUR",
+                    "type": "string",
+					"label": "Contract Workspace currency",
+					"description": "Contract Workspace currency to use in the API calls."
+                },
+                "datacenter": {
+                    "value": "s1",
+                    "type": "string",
+					"label": "Base Url for the realm",
+					"description": "Base Url for the realm."
+                },
+                "suppliers": {
+                    "value": "[]",
+                    "type": "string",
+                    "label": "Code List Supplier for the realm",
+					"description": "Code List Supplier for the realm."
+                },
+                "commodities": {
+                    "value": "[]",
+                    "type": "string",
+                    "label": "Code List Commodity for the realm",
+					"description": "Code List Commodity for the realm."
+                }
+            },
+            "destinations": {
+                "wzcd": { "name": "Work-Zone-Cards-Data" }
+            },
+            "actionHandlers": {
+                "submit": {
+                "url": "{{destinations.wzcd}}/doCreateContractWorkspace",
+                "method": "POST"
+                }
+            }
+        },
+		"content": {
+			"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+			"type": "AdaptiveCard",
+			"version": "1.0",
+			"body": [
+				{
+					"type": "TextBlock",
+					"text": "Title",
+					"isSubtle": true,
+					"size": "medium"
+				},
+				{
+					"type": "Input.Text",
+                    "placeholder": "Your Contract Title",
+					"style": "text",
+					"id": "sTitle"
+				},
+				{
+					"type": "TextBlock",
+					"text": "Amount",
+					"isSubtle": true,
+					"size": "medium"
+				},
+				{
+					"type": "Input.Text",
+                    "placeholder": "Your Contract Amount",
+					"style": "NumVal",
+					"id": "sAmount"
+                },
+                
+
+				{
+					"type": "TextBlock",
+					"text": "Supplier",
+					"isSubtle": true,
+					"size": "medium"
+				},
+				{
+					"type": "Input.ChoiceSet",
+                    "style": "compact",
+                    "isMultiSelect": false,
+                    "id": "sSupplierId",
+                    "choices": [
+					  {
+						"$data": "{suppliers}",
+						"title": "{SupplierName}",
+						"value": "{SupplierId}"
+					  }
+					]
+				},                
+				{
+					"type": "TextBlock",
+					"text": "Commodity",
+					"isSubtle": true,
+					"size": "medium"
+                },
+                {
+					"type": "Input.ChoiceSet",
+                    "style": "compact",
+                    "isMultiSelect": false,
+                    "id": "sCommodity",
+                    "choices": [
+					  {
+						"$data": "{commodities}",
+						"title": "{CommodityName}",
+						"value": "{CommodityCode}"
+					  }
+					]
+				}
+			],
+			"actions": [
+				{
+					"type": "Action.Submit",
+					"title": "Create"
+				}
+			]
+		}
+	},
+    "sap.platform.mobilecards": {  "compatible": false }
+}

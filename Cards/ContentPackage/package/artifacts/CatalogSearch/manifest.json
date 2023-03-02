@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.CatalogSearch",
+		"type": "card",
+		"title": "SAP Ariba Catalog Search",
+		"subTitle": "Search in the SAP Ariba Catalog",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

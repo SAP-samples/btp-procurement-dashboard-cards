@@ -1,0 +1,90 @@
+{
+	"_version": "1.14.0",
+	"sap.app": {
+		"id": "sap.ariba.SupplierParticipation",
+		"type": "card",
+		"title": "Supplier Participation",
+		"subTitle": "In SAP Ariba Sourcing Events",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://donut-chart"
+		}
+	},
+	"sap.card": {
+		"type": "Analytical",
+        "designtime": "dt/configuration",
+		"header": {
+            "title": "Sourcing Supplier Participation",
+		"subTitle": "In SAP Ariba Sourcing Events",
+            "icon": {
+                "src": "sap-icon://supplier"
+            }
+        },
+        "data": {
+            "request": {
+                "method": "GET",
+                "url": "{{destinations.wzcd}}/getSupplierParticipation()?realm={{parameters.realm}}",
+                "withCredentials": true
+            }
+        },
+        "configuration": {
+            "parameters": {
+                "realm": {
+                    "value": "<realmName>",
+                    "type": "string",
+					"label": "Realm",
+					"description": "The realm to connect to."
+                }
+            },
+            "destinations": {
+                "wzcd": {
+                    "name": "Work-Zone-Cards-Data"
+                }
+            }
+        },
+		"content": {
+            "chartType": "Donut",
+			"legend": {
+				"visible": true,
+				"position": "Top",
+				"alignment": "Center"
+			},
+			"plotArea": {
+				"dataLabel": { "visible": true },
+				"categoryAxisText": { "visible": false },
+				"valueAxisText": { "visible": false }
+			},
+			"title": {
+				"text": "Suppliers invited vs. Accepted",
+				"visible": false,
+				"alignment": "Left"
+			},
+			"measureAxis": "size",
+            "dimensionAxis": "color",
+            "data": {
+				"path": "/value"
+			},
+            "dimensions": [
+                {
+                    "label": "Status",
+                    "value": "{= ${AcceptedFlag}?'Accepted':'Not Accepted'}"
+                }
+            ],
+            "measures": [
+                {
+                    "label": "Count",
+                    "value": "{Count}"
+                }
+            ]
+		}
+	},
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

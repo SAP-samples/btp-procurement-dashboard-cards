@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.MyConsumedContracts",
+		"type": "card",
+		"title": "My Contracts Consumption",
+		"subTitle": "My Top 5 contracts about to be consumed",
+		"artifactVersion": {
+			"version": "1.0.1"
+		}
+	}
+}

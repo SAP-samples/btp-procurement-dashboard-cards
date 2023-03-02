@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/UIComponent"],function(a){"use strict";var e=a.extend("sap.ariba.MediaCustomCard",{metadata:{manifest:"json"},onCardReady:function(a){this.card=a}});return e});

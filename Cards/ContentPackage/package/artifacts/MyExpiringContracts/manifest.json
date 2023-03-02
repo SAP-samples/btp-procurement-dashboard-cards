@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.MyExpiringContracts",
+		"type": "card",
+		"title": "My Expiring Contracts",
+		"subTitle": "SAP Ariba Contracts expiring in a month",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

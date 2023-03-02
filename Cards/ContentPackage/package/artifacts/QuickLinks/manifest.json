@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.QuickLinks",
+		"type": "card",
+		"title": "Quick Links",
+		"subTitle": "",
+		"artifactVersion": {
+			"version": "1.0.1"
+		}
+	}
+}

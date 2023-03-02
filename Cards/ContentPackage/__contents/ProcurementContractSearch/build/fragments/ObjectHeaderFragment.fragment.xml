@@ -1,0 +1,112 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:fb="sap.ui.comp.filterbar"
+>
+    <fb:FilterBar id="filterbar" showRestoreButton="true" reset="onReset" search="onSearch" useToolbar="false" showGoOnFB="true">
+        <fb:filterGroupItems>
+        
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="1" label="Search for description" partOfCurrentVariant="true" visibleInFilterBar="true">
+                <fb:control>
+                    <SearchField id="searchField" value="{oViewModel>/searchString}" />
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="H" label="Expiration Date" partOfCurrentVariant="true" visibleInFilterBar="true">
+                <fb:control>
+                    <ComboBox selectedKey="{oViewModel>/expirationDateFilter}">
+                        <items>
+                            <core:Item key="30days" text="Within 30 days" />
+                            <core:Item key="60days" text="Within 60 days" />
+                            <core:Item key="90days" text="Within 90 days" />
+                            <core:Item key="thisyear" text="Within this year" />
+                        </items>
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="B" label="Owned by Me" partOfCurrentVariant="true" visibleInFilterBar="true">
+                <fb:control>
+                    <CheckBox selected="{oViewModel>/createdByMeFilter}" />
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="C" label="Status">
+                <fb:control>
+                    <ComboBox selectedKey="{oViewModel>/statusFilter}">                      
+                        <items>
+                            <core:Item key="Draft" text="Draft" />
+                            <core:Item key="Published" text="Published" />
+                            <core:Item key="Pending" text="Pending" />
+                            <core:Item key="OnHold" text="On Hold" />
+                            <core:Item key="Expired" text="Expired" />
+                            <core:Item key="Closed" text="Closed" />
+                            <core:Item key="DraftAmendment" text="Draft Amendment" />
+                            <core:Item key="NotCreated" text="Not Created" />
+                            <core:Item key="Publishing" text="Publishing" />
+                        </items>
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="D" label="Contract Amount">
+                <fb:control>
+                    <ComboBox selectedKey="{oViewModel>/amountFilter}">
+                        <items>
+                            <core:Item key="lt50k" text="50k or below" />
+                            <core:Item key="lt100k" text="50k - 100k" />
+                            <core:Item key="lt250k" text="100k - 250k" />
+                            <core:Item key="lt500k" text="250k - 500k" />
+                            <core:Item key="lt1M" text="500k - 1M" />
+                            <core:Item key="gt1M" text="1M and above" />
+                        </items>
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="E" label="Region">
+                <fb:control>
+                    <ComboBox selectedKey="{oViewModel>/regionFilter}">
+                        <items>
+                            <core:Item key="USA" text="USA" />
+                            <core:Item key="EMEA" text="EMEA" />
+                            <core:Item key="APJ" text="APJ" />
+                        </items>
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="J" label="Department">
+                <fb:control>
+                    <ComboBox items="{codelist>/departments}" selectedKey="{oViewModel>/departmentFilter}">
+                        <core:Item key="{codelist>ID}" text="{codelist>Function} ({codelist>ID})" />
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="I" label="Commodity">
+                <fb:control>
+                    <ComboBox items="{codelist>/commodities}" selectedKey="{oViewModel>/commodityFilter}">
+                        <core:Item key="{codelist>CommodityCode}" text="{codelist>CommodityName}" />
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="F" label="Term Type">
+                <fb:control>
+                    <ComboBox selectedKey="{oViewModel>/termTypeFilter}">
+                        <items>
+                            <core:Item key="Fixed" text="Fixed" />
+                            <core:Item key="Perpetual" text="Perpetual" />
+                            <core:Item key="AutoRenew" text="Auto Renew" />
+                        </items>
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="G" label="Hierarchical Type">
+                <fb:control>
+                    <ComboBox selectedKey="{oViewModel>/hierarchicalTypeFilter}">
+                        <items>
+                            <core:Item key="StandAlone" text="Stand-alone Agreement" />
+                            <core:Item key="MasterAgreement" text="Master Agreement" />
+                            <core:Item key="SubAgreement" text="Sub Agreement" />
+                        </items>
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+
+        </fb:filterGroupItems>
+    </fb:FilterBar>
+</core:FragmentDefinition>

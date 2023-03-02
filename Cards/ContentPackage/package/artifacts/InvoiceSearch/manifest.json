@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.InvoiceSearch",
+		"type": "card",
+		"title": "Invoice Search",
+		"subTitle": "Based on SAP Ariba Invoices",
+		"artifactVersion": {
+			"version": "1.0.2"
+		}
+	}
+}

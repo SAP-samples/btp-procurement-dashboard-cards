@@ -1,0 +1,123 @@
+{
+	"_version": "1.14.0",
+	"sap.app": {
+		"id": "sap.ariba.InvoiceExceptions",
+		"type": "card",
+		"title": "Invoice Exceptions",
+		"subTitle": "Based on SAP Ariba Invoices",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://donut-chart"
+		}
+	},
+	"sap.card": {
+		"type": "Analytical",
+        "designtime": "dt/configuration",
+		"header": {
+			"title": "Invoice Exceptions",
+            "subTitle": "Based on SAP Ariba Invoices"
+		},
+        "data": {
+            "request": {
+                "method": "GET",
+                "url": "{{destinations.wzcd}}/getInvoiceExceptions()?realm={{parameters.realm}}&fromDate={{parameters.fromDate}}",
+                "withCredentials": true
+            }
+        },
+        "configuration": {
+            "parameters": {
+                "realm": {
+                    "value": "<realmName>",
+                    "type": "string",
+					"label": "Realm",
+					"description": "The realm to connect to."
+                },
+                "fromDate": {
+                    "value": "2021-01-01T00:00:00Z",
+                    "type": "string",
+					"label": "fromDate",
+					"description": "The date for which to check PO data. (ie: 2020-01-01T00:00:00Z from 2020)"
+                },
+                "target": {
+                    "value": "75",
+                    "type": "string",
+					"label": "target",
+					"description": "The target percentage of Catalog spend volume"
+                },
+                "reportingCurrency": {
+                    "value": "EUR",
+                    "type": "string",
+					"label": "Reporting Currency",
+					"description": "The realm default"
+                }
+            },
+            "destinations": {
+                "wzcd": {
+                    "name": "Work-Zone-Cards-Data"
+                }
+            }
+        },
+		"content": {
+			"chartType": "pie",
+			"legend": {
+				"visible": true
+			},
+			"plotArea": {
+				"dataLabel": {
+					"visible": true,
+					"showTotal": false
+				}
+			},
+			"title": {
+				"text": "Donut chart",
+				"visible": false,
+				"alignment": "Left"
+			},
+			"measureAxis": "size",
+			"dimensionAxis": "color",
+			"data": {
+				"path": "/value/"
+			},
+			"dimensions": [
+				{
+					"label": "ExceptionTypeId",
+					"value": "{ExceptionTypeId}"
+				}
+			],
+			"measures": [
+				{
+					"label": "Total",
+					"value": "{Total}"
+				}
+			],
+            "feeds": [
+				{
+					"uid": "size",
+					"type": "Measure",
+					"values": [
+						"total"
+					]
+				},
+				{
+					"uid": "color",
+					"type": "Dimension",
+					"values": [
+						"ExceptionTypeId"
+					]
+				}
+			],
+            "popover":{
+                "active":true
+            }
+		}
+	},
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

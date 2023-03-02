@@ -1,0 +1,446 @@
+{
+	"sap.package": {
+		"id": "sap.Procurement",
+		"packageVersion": {
+			"version": "0.0.4",
+			"upgradeNotification": "all"
+		},
+		"i18n": "i18n/i18n.properties",
+		"icon": "sap-icon://accept",
+		"title": "{{PACKAGE_TITLE}}",
+		"subTitle": "{{PACKAGE_SUBTITLE}}",
+		"shortTitle": "{{PACKAGE_SHORTTITLE}}",
+		"info": "{{PACKAGE_INFO}}",
+		"description": "{{PACKAGE_DESCRIPTION}}",
+		"tags": {
+			"keywords": [
+				"{{PACKAGE_KEYWORD1}}",
+				"{{PACKAGE_KEYWORD2}}"
+			]
+		},
+		"vendor": {
+			"name": "SAP Ariba",
+			"url": "https://sap.com"
+		},
+		"scope": "external",
+		"license": {
+			"text": "",
+			"url": ""
+		},
+		"homepage": {
+			"text": "SAP SE",
+			"url": "https://sap.com"
+		},
+		"support": {
+			"url": "https://support.sap.com"
+		},
+		"contents": [
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.CatalogSearch",
+						"type": "card",
+						"title": "SAP Ariba Catalog Search",
+						"subTitle": "Search in the SAP Ariba Catalog",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/CatalogSearch"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.CatVsNonCatSpend",
+						"type": "card",
+						"title": "Catalogue vs Non-Catalogue Spend",
+						"subTitle": "Based on Purchase Orders",
+						"artifactVersion": {
+							"version": "1.0.1"
+						}
+					}
+				},
+				"baseURL": "artifacts/CatVsNonCatSpend"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.fieldglass.ContingentWorkSpendByCostCenter",
+						"type": "card",
+						"title": "Contingent Work",
+						"subTitle": "Spend By Cost Center",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/ContingentWorkSpendByCostCenter"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.ContractVsNonContract",
+						"type": "card",
+						"title": "Contract Vs Non Contract spend",
+						"subTitle": "Based on Purchase Order",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/ContractVsNonContract"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.CreateContractWorkspace",
+						"type": "card",
+						"title": "Create Contract Workspace",
+						"subTitle": "SAP Ariba ",
+						"artifactVersion": {
+							"version": "1.0.1"
+						}
+					}
+				},
+				"baseURL": "artifacts/CreateContractWorkspace"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.DiverseSupplierSearch",
+						"type": "card",
+						"title": "Diverse Supplier Search",
+						"subTitle": "Based on SAP Ariba Suppliers",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/DiverseSupplierSearch"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.EventsPerRegions",
+						"type": "card",
+						"title": "Sourcing Events per Regions",
+						"subTitle": "In SAP Ariba Sourcing Events",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/EventsPerRegions"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.GBCatalogSearch",
+						"type": "card",
+						"title": "Catalog Search",
+						"subTitle": "In Sap Ariba Guided Buying",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/GBCatalogSearch"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.InvoicebyStatus",
+						"type": "card",
+						"title": "Invoice By Status",
+						"subTitle": "Based on SAP Ariba Invoices",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/InvoicebyStatus"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.InvoiceExceptions",
+						"type": "card",
+						"title": "Invoice Exceptions",
+						"subTitle": "Based on SAP Ariba Invoices",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/InvoiceExceptions"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.InvoicePaymentDuration",
+						"type": "card",
+						"title": "Invoice Payment Duration",
+						"subTitle": "Based on SAP Ariba data (last 12 months)",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/InvoicePaymentDuration"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.InvoiceSearch",
+						"type": "card",
+						"title": "Invoice Search",
+						"subTitle": "Based on SAP Ariba Invoices",
+						"artifactVersion": {
+							"version": "1.0.2"
+						}
+					}
+				},
+				"baseURL": "artifacts/InvoiceSearch"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.MediaCustomCard",
+						"type": "card",
+						"title": "Generic Media Custom Card",
+						"subTitle": "Access a specific URL",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/MediaCustomCard"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.MyConsumedContracts",
+						"type": "card",
+						"title": "My Contracts Consumption",
+						"subTitle": "My Top 5 contracts about to be consumed",
+						"artifactVersion": {
+							"version": "1.0.1"
+						}
+					}
+				},
+				"baseURL": "artifacts/MyConsumedContracts"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.MyContractWorkspaces",
+						"type": "card",
+						"title": "My Contract Workspaces",
+						"subTitle": "My last 5 contract workspaces",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/MyContractWorkspaces"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.MyContractWorkspacesAPI",
+						"type": "card",
+						"title": "My Contract Workspaces API",
+						"subTitle": "Recent contract workspaces live",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/MyContractWorkspacesAPI"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.MyExpiringContracts",
+						"type": "card",
+						"title": "My Expiring Contracts",
+						"subTitle": "SAP Ariba Contracts expiring in a month",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/MyExpiringContracts"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.MyPendingInvoices",
+						"type": "card",
+						"title": "My Pending Invoices",
+						"subTitle": "My last 10 pending Invoice Items",
+						"artifactVersion": {
+							"version": "1.0.1"
+						}
+					}
+				},
+				"baseURL": "artifacts/MyPendingInvoices"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.MyRequisitions",
+						"type": "card",
+						"title": "My Requisitions",
+						"subTitle": "My last 10 requisition items",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/MyRequisitions"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.MySourcingProjects",
+						"type": "card",
+						"title": "My Sourcing Projects",
+						"subTitle": "Last 5 sourcing projects",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/MySourcingProjects"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.MySpendPerQuarter",
+						"type": "card",
+						"title": "My Spend Per Quarter",
+						"subTitle": "Last 4 quarters",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/MySpendPerQuarter"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.fieldglass.OpenJobPostings",
+						"type": "card",
+						"title": "Open Job Postings",
+						"subTitle": "Open job posting in SAP Fieldglass",
+						"artifactVersion": {
+							"version": "1.0.1"
+						}
+					}
+				},
+				"baseURL": "artifacts/OpenJobPostings"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.ProcurementContractSearch",
+						"type": "card",
+						"title": "Procurement Contract Search",
+						"subTitle": "Contract Workspaces",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/ProcurementContractSearch"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.QuickLinks",
+						"type": "card",
+						"title": "Quick Links",
+						"subTitle": "",
+						"artifactVersion": {
+							"version": "1.0.1"
+						}
+					}
+				},
+				"baseURL": "artifacts/QuickLinks"
+			},
+			{
+				"manifest": {
+					"_version": "1.27.0",
+					"_generator": "",
+					"sap.artifact": {
+						"id": "sap.ariba.SupplierParticipation",
+						"type": "card",
+						"title": "Supplier Participation",
+						"subTitle": "In SAP Ariba Sourcing Events",
+						"artifactVersion": {
+							"version": "1.0.0"
+						}
+					}
+				},
+				"baseURL": "artifacts/SupplierParticipation"
+			}
+		],
+		"consumption": [],
+		"dependencies": {
+			"products": [],
+			"services": []
+		},
+		"destinations": []
+	}
+}

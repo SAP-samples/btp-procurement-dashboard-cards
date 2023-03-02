@@ -1,0 +1,47 @@
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:fb="sap.ui.comp.filterbar"
+>
+    <fb:FilterBar id="filterbar" showRestoreButton="true" reset="onReset" search="onSearch" useToolbar="false" showGoOnFB="true">
+        <fb:filterGroupItems>
+        
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="A" label="Invoice No" partOfCurrentVariant="true" visibleInFilterBar="true">
+                <fb:control>
+                    <SearchField id="searchField" value="{oViewModel>/invoiceIdFilter}" />
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="B" label="Invoice Date" partOfCurrentVariant="true" visibleInFilterBar="true">
+                <fb:control>
+                    <ComboBox selectedKey="{oViewModel>/invDateFilter}">
+                        <items>
+                            <core:Item key="30days" text="Within 30 days" />
+                            <core:Item key="60days" text="Within 60 days" />
+                            <core:Item key="90days" text="Within 90 days" />
+                            <core:Item key="thisyear" text="Within this year" />
+                        </items>
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="C" label="Owned by Me" partOfCurrentVariant="true" visibleInFilterBar="true">
+                <fb:control>
+                    <CheckBox selected="{oViewModel>/createdByMeFilter}" />
+                </fb:control>
+            </fb:FilterGroupItem>
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="D" label="Status">
+                <fb:control>
+                    <ComboBox selectedKey="{oViewModel>/statusFilter}" items="{statusList>/statuses}">                      
+                        <core:Item key="{statusList>Key}" text="{statusList>Name}"/>	
+                    </ComboBox>
+                </fb:control>
+            </fb:FilterGroupItem>
+          
+            <fb:FilterGroupItem groupName="__$INTERNAL$" name="E" label="Supplier Id">
+                <fb:control>
+                    <SearchField id="searchFieldSupplier" value="{oViewModel>/supplierIdFilter}" />
+                </fb:control>
+            </fb:FilterGroupItem>
+
+        </fb:filterGroupItems>
+    </fb:FilterBar>
+</core:FragmentDefinition>

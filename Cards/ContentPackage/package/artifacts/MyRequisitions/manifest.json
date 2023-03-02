@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.MyRequisitions",
+		"type": "card",
+		"title": "My Requisitions",
+		"subTitle": "My last 10 requisition items",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

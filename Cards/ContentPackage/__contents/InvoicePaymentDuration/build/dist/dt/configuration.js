@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/integration/Designtime"],function(a){"use strict";return function(){return new a({form:{items:{realm:{manifestpath:"/sap.card/configuration/parameters/realm/value",type:"string",translatable:false},target:{manifestpath:"/sap.card/configuration/parameters/target/value",type:"string",translatable:false}}},preview:{modes:"Abstract"}})}});

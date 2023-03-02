@@ -1,0 +1,82 @@
+{
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "sap.ariba.InvoiceSearch",
+		"type": "card",
+		"title": "Invoice Search",
+		"subTitle": "Based on SAP Ariba Invoices",
+		"applicationVersion": {
+			"version": "1.0.2"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://technical-object"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.ariba.InvoiceSearch.View",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.38",
+			"libs": {
+				"sap.m": {}
+			}
+		}
+	},
+	"sap.card": {
+		"type": "Component",
+        "designtime": "dt/configuration",
+		"configuration": {
+			"parameters": {
+                "realm": {
+                    "value": "<realmName>",
+                    "type": "string",
+                    "label": "The realm to connect to."
+                },
+                "datacenter": {
+                    "value": "s1",
+                    "type": "string",
+                    "label": "The datacenter the realm belongs to (ie: s1 for us, s1-eu for eu...)"
+                },
+                "searchResult": {
+                    "value": 5,
+                    "type": "integer",
+                    "label": "Amount of Records displayed as the Search Result"
+                },
+                "user": {
+                    "value": "",
+                    "type": "string",
+                    "label": "UserID for selection on 'Select Mine' (For Test purpose only)",
+					"description": "For Test purpose only"
+                },
+                "statuses": {
+                    "value": "[{\"Key\":\"Approving\",\"Name\":\"Approving\"},{\"Key\":\"Approved\",\"Name\":\"Approved\"},{\"Key\":\"Paid\",\"Name\":\"Paid\"},{\"Key\":\"Paying\",\"Name\":\"Paying\"},{\"Key\":\"Reconciled\",\"Name\":\"Reconciled\"},{\"Key\":\"Reconciling\",\"Name\":\"Reconciling\"}]",
+                    "type": "string",
+                    "label": "List of Invoice Status for filtering",
+					"description": "List of Invoice Status for filtering"
+                }
+			},
+            "destinations": {
+                "wzcd": { "name": "Work-Zone-Cards-Data" }
+            }
+		},
+		"header": {
+            "icon": {
+                "src": "sap-icon://search"
+            },
+            "title": "Invoice Search",
+            "subTitle": "Based on SAP Ariba Invoices"           
+        
+		}
+	},
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

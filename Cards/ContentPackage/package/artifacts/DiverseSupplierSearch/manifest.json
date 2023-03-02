@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.DiverseSupplierSearch",
+		"type": "card",
+		"title": "Diverse Supplier Search",
+		"subTitle": "Based on SAP Ariba Suppliers",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

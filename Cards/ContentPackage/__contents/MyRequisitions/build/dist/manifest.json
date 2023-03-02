@@ -1,0 +1,99 @@
+{
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "sap.ariba.MyRequisitions",
+		"type": "card",
+		"title": "My Requisitions",
+		"subTitle": "My last 10 requisition items",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://table-view"
+		}
+	},
+	"sap.card": {
+		"type": "Table",
+        "designtime": "dt/configuration",
+        "configuration": {
+            "parameters": {
+                "realm": {
+                    "value": "<realmName>",
+                    "type": "string",
+					"label": "Realm",
+					"description": "The realm to connect to."
+                },
+                "datacenter": {
+                    "value": "s1",
+                    "type": "string",
+					"label": "Datacenter",
+					"description": "The datacenter the realm belongs to (ie: s1 for us, s1-eu for eu...) "
+                },
+                "user": {
+                    "value": "",
+                    "type": "string",
+					"label": "User ID",
+					"description": "For Test purpose only"
+                }
+            },
+            "destinations": {
+                "wzcd": {
+                    "name": "Work-Zone-Cards-Data"
+                }
+            }
+        },
+        "data": {
+            "request": {
+                "url": "{{destinations.wzcd}}/getMyRequisitions()?realm={{parameters.realm}}&user={{parameters.user}}",
+                "withCredentials": true
+            }
+        }, 
+        "header": {
+            "title": "My Requisitions",
+            "subTitle": "My last 10 Requisition items"
+            
+        },
+		"content": {
+            "data": {
+                "path": "/value/"
+            },
+            "row": {
+                "columns": [
+                    {
+                        "title": "Requisition",
+                        "value": "{RequisitionId}",
+                        "identifier": true,
+                        "actions": [
+                            {
+                                "type": "Navigation",
+                                "parameters": {
+                                    "url": "https://{{parameters.datacenter}}.ariba.com/gb/viewRequisition/{RequisitionId}?realm={{parameters.realm}}"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Title",
+                        "value": "{TitleString}"
+                    },
+                     {
+                        "title": "Item Description",
+                        "value": "{=${Description}.length>30 ?${Description}.substring(0,50) +'...' :${Description} }"
+                    },
+                    {
+                        "title": "Status",
+                        "value": "{StatusString}",
+                        "state": "{=${StatusString} === 'Ordered'?'Success':'Warning'}"
+                    }
+                ]
+            }
+		}
+	},
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

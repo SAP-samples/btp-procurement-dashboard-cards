@@ -1,0 +1,118 @@
+{
+	"_version": "1.14.0",
+	"sap.app": {
+		"id": "sap.ariba.InvoicePaymentDuration",
+		"type": "card",
+		"title": "Invoice Payment Duration",
+		"subTitle": "Based on SAP Ariba data (last 12 months)",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://full-stacked-column-chart"
+		}
+	},
+	"sap.card": {
+		"type": "Analytical",
+        "designtime": "dt/configuration",
+        "configuration": {
+            "parameters": {
+                "realm": {
+                    "value": "<realmName>",
+                    "type": "string",
+					"label": "Realm",
+					"description": "The realm to connect to."
+                },
+                "target": {
+                    "value": "30",
+                    "type": "string",
+					"label": "target",
+					"description": "The target percentage of Catalog spend volume"
+                }
+            },
+            "destinations": {
+                "wzcd": {
+                    "name": "Work-Zone-Cards-Data"
+                }
+            }
+        },
+        "header": {
+			"title": "Monthly Invoice Average Payment Time",
+            "subTitle":"Based on paid SAP Ariba Invoices",
+            "icon": {
+                "src": "sap-icon://monitor-payments"
+            }
+		},
+		"content": {
+			"data": {
+				"request": {
+					"method": "GET",
+                    "url": "{{destinations.wzcd}}/getInvoicePaymentTime()?realm={{parameters.realm}}",
+                    "withCredentials": true
+				},
+				"path": "/value"
+			},
+			"chartType": "bar",
+			"chartProperties": {
+				"title": {
+					"visible": false
+				},
+				"legend": {
+					"visible": false
+				},
+				"plotArea": {
+					"referenceLine": {
+						"line": {
+                            "valueAxis": [{
+								"value": "{{parameters.target}}",
+								"visible": true,
+								"label": {
+									"text": "Target Payment Time",
+									"visible": true,
+									"background": "sapUiPositiveElement"
+								},
+								"color": "sapUiPositiveElement"
+							}]
+						}
+					}
+				}
+			},
+			"minHeight": "20rem",
+			"dimensions": [
+				{
+					"name": "Month",
+					"value": "{Month}"
+				}
+			],
+			"measures": [
+				{
+					"name": "Time (Days)",
+					"value": "{PaymentTimeAverage}"
+				}
+			],
+			"feeds": [
+				{
+					"uid": "valueAxis",
+					"type": "Measure",
+					"values": [
+						"Time (Days)"
+					]
+				},
+				{
+					"uid": "categoryAxis",
+					"type": "Dimension",
+					"values": [
+						"Month"
+					]
+				}
+			]
+		}
+	},
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

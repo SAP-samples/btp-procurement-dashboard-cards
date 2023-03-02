@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    var _oCardInfo = {
+        cardWrapperCSSPath : "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/style/previewwrapper.css",
+        cardMetaPath : "/home/user/projects/NexGenUICards/NexGen-Cards/Production/MySpendPerQuarter/manifest.json",
+        cardMeta : JSON.parse(unescape("%7B%0A%09%22_version%22%3A%20%221.14.0%22%2C%0A%09%22sap.app%22%3A%20%7B%0A%09%09%22id%22%3A%20%22sap.ariba.MySpendPerQuarter%22%2C%0A%09%09%22type%22%3A%20%22card%22%2C%0A%09%09%22title%22%3A%20%22My%20Spend%20Per%20Quarter%22%2C%0A%09%09%22subTitle%22%3A%20%22Last%204%20quarters%22%2C%0A%09%09%22applicationVersion%22%3A%20%7B%0A%09%09%09%22version%22%3A%20%221.0.0%22%0A%09%09%7D%0A%09%7D%2C%0A%09%22sap.ui%22%3A%20%7B%0A%09%09%22technology%22%3A%20%22UI5%22%2C%0A%20%20%20%20%20%20%20%20%22deviceTypes%22%3A%20%7B%22desktop%22%3A%20true%2C%20%22phone%22%3A%20true%2C%20%22tablet%22%3A%20true%7D%2C%0A%09%09%22icons%22%3A%20%7B%0A%09%09%09%22icon%22%3A%20%22sap-icon%3A//line-chart%22%0A%09%09%7D%0A%09%7D%2C%0A%09%22sap.card%22%3A%20%7B%0A%09%09%22type%22%3A%20%22Analytical%22%2C%0A%20%20%20%20%20%20%20%20%22designtime%22%3A%20%22dt/configuration%22%2C%0A%09%09%22header%22%3A%20%7B%0A%09%09%09%22type%22%3A%20%22Numeric%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22title%22%3A%20%22My%20Spend%20Per%20Quarter%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22subTitle%22%3A%20%22Last%204%20quarters%20based%20on%20Purchase%20Requisitions%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22unitOfMeasurement%22%3A%20%22%7BOverallCurrency%7D%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22icon%22%3A%20%7B%0A%09%09%09%09%22src%22%3A%20%22sap-icon%3A//line-chart%22%0A%09%09%09%7D%2C%0A%09%09%09%22mainIndicator%22%3A%20%7B%0A%09%09%09%09%22number%22%3A%20%22%7BOverallAmount%7D%22%2C%0A%09%09%09%09%22trend%22%3A%20%22%7BTrend%7D%22%0A%09%09%09%7D%2C%0A%09%09%09%22sideIndicators%22%3A%20%5B%0A%09%09%09%09%7B%0A%09%09%09%09%09%22title%22%3A%20%22Total%20PRs%22%2C%0A%09%09%09%09%09%22number%22%3A%20%22%7BDataCount%7D%22%0A%09%09%09%09%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22details%22%3A%20%22%7BYear%7D%22%0A%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%22data%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22request%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22url%22%3A%20%22%7B%7Bdestinations.wzcd%7D%7D/getMySpendPerQuarter%28%29%3Frealm%3D%7B%7Bparameters.realm%7D%7D%26reportingCurrency%3D%7B%7Bparameters.reportingCurrency%7D%7D%26user%3D%7B%7Bparameters.user%7D%7D%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22withCredentials%22%3A%20true%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%22configuration%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22parameters%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22realm%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22%3CrealmName%3E%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%09%09%09%09%09%22label%22%3A%20%22Realm%22%2C%0A%09%09%09%09%09%22description%22%3A%20%22The%20realm%20to%20connect%20to.%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22reportingCurrency%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22EUR%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%09%09%09%09%09%22label%22%3A%20%22Reporting%20Currency%22%2C%0A%09%09%09%09%09%22description%22%3A%20%22The%20realm%20default%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22user%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%09%09%09%09%09%22label%22%3A%20%22User%20ID%22%2C%0A%09%09%09%09%09%22description%22%3A%20%22For%20Test%20purpose%20only%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22destinations%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22wzcd%22%3A%20%7B%20%22name%22%3A%20%22Work-Zone-Cards-Data%22%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%2C%0A%09%09%22content%22%3A%20%7B%0A%09%09%09%22chartType%22%3A%20%22Line%22%2C%0A%09%09%09%22legend%22%3A%20%7B%0A%09%09%09%09%22visible%22%3A%20true%2C%0A%09%09%09%09%22position%22%3A%20%22Bottom%22%2C%0A%09%09%09%09%22alignment%22%3A%20%22TopLeft%22%0A%09%09%09%7D%2C%0A%09%09%09%22plotArea%22%3A%20%7B%0A%09%09%09%09%22dataLabel%22%3A%20%7B%20%22visible%22%3A%20true%20%7D%2C%0A%09%09%09%09%22categoryAxisText%22%3A%20%7B%20%22visible%22%3A%20false%20%7D%2C%0A%09%09%09%09%22valueAxisText%22%3A%20%7B%20%22visible%22%3A%20false%20%7D%0A%09%09%09%7D%2C%0A%09%09%09%22title%22%3A%20%7B%20%22visible%22%3A%20false%20%7D%2C%0A%09%09%09%22measureAxis%22%3A%20%22valueAxis%22%2C%0A%09%09%09%22dimensionAxis%22%3A%20%22categoryAxis%22%2C%0A%09%09%09%22data%22%3A%20%7B%0A%09%09%09%09%22path%22%3A%20%22/QuarterAmount%22%0A%09%09%09%7D%2C%0A%09%09%09%22dimensions%22%3A%20%5B%0A%09%09%09%09%7B%0A%09%09%09%09%09%22label%22%3A%20%22Quarter%22%2C%0A%09%09%09%09%09%22value%22%3A%20%22%7BQuarter%7D%22%20%0A%09%09%09%09%7D%0A%09%09%09%5D%2C%0A%09%09%09%22measures%22%3A%20%5B%0A%09%09%09%09%7B%0A%09%09%09%09%09%22label%22%3A%20%22My%20Spend%22%2C%0A%09%09%09%09%09%22value%22%3A%20%22%7BAmount%7D%22%0A%09%09%09%09%7D%0A%09%09%09%5D%0A%09%09%7D%0A%09%7D%2C%0A%20%20%20%20%22sap.platform.mobilecards%22%3A%20%7B%20%22compatible%22%3A%20false%20%7D%0A%7D")),
+        CardMetaError : "",
+        cardBasePath : "/home/user/projects/NexGenUICards/NexGen-Cards/Production/MySpendPerQuarter/",
+        cardBaseRelativePath : "Production/MySpendPerQuarter",
+        cardUseMeta: true,
+        cardWPBaseURL : "",//getWPBaseURL(),
+        cardDestinationBaseURL: "",//getWPBaseURL(true),
+        ui5Version: "1.87.0",
+        ui5Url: "https://sapui5.hana.ondemand.com/1.87.0/resources/sap-ui-core.js"
+    };
+
+    function getWPBaseURL(bDestination) {
+        var path = window.location.href;
+        path = bDestination?path.substring(0, path.indexOf("mini-browser")):path.substring(0, path.indexOf("mini-browser")+12);
+        return path;
+    }
+    function addSheetFile(path){
+        var fileref=parent.document.createElement("link");
+        fileref.id="cardpreviewwrapper";
+        fileref.rel="stylesheet";
+        fileref.type="text/css";
+        fileref.href=getWPBaseURL() + '/' + path;
+        fileref.media="screen";
+        var headobj=parent.document.getElementsByTagName('head')[0];
+        headobj.appendChild(fileref);
+    }
+    function delSheetFile(){
+        var headobj=parent.document.getElementsByTagName('head')[0];
+        var linkobj = parent.document.getElementById("cardpreviewwrapper");
+        if (headobj && linkobj) {
+            headobj.removeChild(linkobj);
+        }
+    }
+window.parent.addEventListener('message', event => {
+    if (typeof(event.data) == "string" || !event.data.data) return;
+    const message = event.data.data;
+    switch (message.cmd) {
+        case 'refreshPreview':
+            document.updateCard(message.data);
+            break;
+        default: break;
+    }
+});
+    document.loadCard = function()
+    {
+        _oCardInfo.cardWPBaseURL = getWPBaseURL();
+        _oCardInfo.cardDestinationBaseURL = getWPBaseURL(true);
+
+        addSheetFile(_oCardInfo.cardWrapperCSSPath);
+        var contentDoc=document.getElementById("previewframe").contentDocument;
+        var ui5Url = _oCardInfo.ui5Url; //"https://sapui5.hana.ondemand.com/" + _oCardInfo.ui5Version + "/resources/sap-ui-core.js";
+        contentDoc.loadCard(ui5Url, _oCardInfo);
+        //contentDoc.previewCard(_oCardInfo);
+    };
+
+    document.updateCard = function(data)
+    {
+        var meta = "{}", metaError = "";
+        try {
+            meta = JSON.parse(data.meta);
+        }catch(err) {
+            meta = "{}";
+            metaError = err.message;
+        }
+        _oCardInfo.cardMetaPath = data.path;
+        _oCardInfo.cardMeta = meta;
+        _oCardInfo.CardMetaError = metaError;
+        _oCardInfo.cardBasePath = data.cardBasePath;
+        _oCardInfo.cardBaseRelativePath = data.cardBaseRelativePath;
+        _oCardInfo.cardUseMeta = true;
+        _oCardInfo.cardWPBaseURL = getWPBaseURL();
+        _oCardInfo.cardDestinationBaseURL = getWPBaseURL(true);
+        if (data.ui5Version !== _oCardInfo.ui5Version) {
+            var iframe=document.getElementById("previewframe");
+            _oCardInfo.ui5Version = data.ui5Version;
+            iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html" + "?time="+new Date().getTime();
+            //iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html" + "?ui5Version="+_oCardInfo.ui5Version+"&time="+new Date().getTime();
+            return;
+        }
+        var contentDoc=document.getElementById("previewframe").contentDocument;
+        contentDoc.updateCard(_oCardInfo);
+    };
+    </script>
+</head>
+
+<body style="margin:0;"  onunload="unload()" >
+    <iframe id="previewframe" width="100%" style="display:block;border: none;"></iframe>
+    <script type="text/javascript">
+    var iframe=document.getElementById("previewframe");
+    iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html" + "?time="+new Date().getTime();
+    //iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html" + "?ui5Version="+_oCardInfo.ui5Version;
+    //iframe.src = pre + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html?cardBasePath=\"/home/user/projects/NexGenUICards/NexGen-Cards/Production/MySpendPerQuarter/\"";
+    if (iframe.attachEvent){
+        iframe.attachEvent("onload", function(){
+            //var height=($.browser.msie||$.browser.opera)? iframe.document.body.scrollHeight:iframe.contentDocument.body.offsetHeight;
+            //var height=($.browser.msie||$.browser.opera)? document.body.scrollHeight:document.body.offsetHeight;
+            iframe.height = window.innerHeight;
+            document.loadCard();
+        });
+        iframe.attachEvent("onunload", function(){
+            delSheetFile();
+        });
+    } else {
+        iframe.onload = function(){
+            //var height=($.browser.msie||$.browser.opera)? iframe.document.body.scrollHeight:iframe.contentDocument.body.offsetHeight;
+            //var height=($.browser.msie||$.browser.opera)? document.body.scrollHeight:document.body.offsetHeight;
+            iframe.height = window.innerHeight;
+            document.loadCard();
+        };
+        iframe.onunload = function(){
+            delSheetFile();
+        };
+    }
+    window.onunload = function(){
+        //alert("window.onunload");
+        //delSheetFile();
+    };
+
+    </script>
+</body>
+</html>

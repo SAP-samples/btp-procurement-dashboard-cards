@@ -1,0 +1,13 @@
+{
+	"_version": "1.27.0",
+	"_generator": "",
+	"sap.artifact": {
+		"id": "sap.ariba.GBCatalogSearch",
+		"type": "card",
+		"title": "Catalog Search",
+		"subTitle": "In Sap Ariba Guided Buying",
+		"artifactVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

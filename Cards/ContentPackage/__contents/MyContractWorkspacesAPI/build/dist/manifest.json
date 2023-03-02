@@ -1,0 +1,87 @@
+{
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "sap.ariba.MyContractWorkspacesAPI",
+		"type": "card",
+		"title": "My Contract Workspaces API",
+		"subTitle": "Recent contract workspaces live",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://technical-object"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.ariba.MyContractWorkspacesAPI.View",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.38",
+			"libs": {
+				"sap.m": {}
+			}
+		}
+	},
+	"sap.card": {
+		"type": "Component",
+        "designtime": "dt/configuration",
+		"configuration": {
+            "parameters": {
+                "realm": {
+                    "value": "<realmName>",
+                    "type": "string",
+                    "label": "Realm",
+					"description": "The realm to connect to."
+                },
+                "datacenter": {
+                    "value": "s1",
+                    "type": "string",
+                    "label": "Datacenter",
+					"description": "The datacenter the realm belongs to (ie: s1 for us, s1-eu for eu...) "
+                },
+                "searchResult": {
+                    "value": 5,
+                    "type": "integer",
+                    "label": "Amount of Records displayed as the Search Result"
+                },
+                "lastXDays": {
+                    "value": 10,
+                    "type": "integer",
+                    "label": "Consider CWs modified in the last x days"
+                },
+                "user": {
+                    "value": "",
+                    "type": "string",
+					"label": "User ID",
+					"description": "For Test purpose only"
+                },
+                "passwordAdapter": {
+                    "value": "PasswordAdapter1",
+                    "type": "string",
+                    "label": "Password Adapter for the SAP Ariba users"
+                }
+            },
+            "destinations": {
+                "wzcd": { "name": "Work-Zone-Cards-Data" }
+            }
+		},
+		"header": {
+			"title": "My Recent Procurement Contracts",
+			"subTitle": "From live SAP Ariba API",
+            "icon": {
+				"src": "sap-icon://decision"
+			}
+		}
+	},
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

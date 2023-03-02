@@ -1,0 +1,117 @@
+{
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "sap.ariba.MyPendingInvoices",
+		"type": "card",
+		"title": "My Pending Invoices",
+		"subTitle": "My last 10 pending Invoice Items",
+		"applicationVersion": {
+			"version": "1.0.1"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://table-view"
+		}
+	},
+	"sap.card": {
+		"type": "Table",
+        "designtime": "dt/configuration",
+        "configuration": {
+            "parameters": {
+                "realm": {
+                    "value": "<realmName>",
+                    "type": "string",
+					"label": "Realm",
+					"description": "The realm to connect to."
+                },
+                "datacenter": {
+                    "value": "s1",
+                    "type": "string",
+					"label": "Datacenter",
+					"description": "The datacenter the realm belongs to (ie: s1 for us, s1-eu for eu...) "
+                },
+                "user": {
+                    "value": "",
+                    "type": "string",
+					"label": "User ID",
+					"description": "For Test purpose only"
+                },
+                "top": {
+                    "value": "10",
+                    "type": "string",
+					"label": "Number of results",
+					"description": "Number of entries retrieved by the card"
+                }
+            },
+            "destinations": {
+                "wzcd": {
+                    "name": "Work-Zone-Cards-Data"
+                }
+            }
+        },
+		"data": {           
+            "request": {
+                "url": "{{destinations.wzcd}}/getMyPendingInvoices()?realm={{parameters.realm}}&user={{parameters.user}}&top={{parameters.top}}",
+                "withCredentials": true
+            }            
+		},
+		"header": {
+			"title": "My Pending Invoices",
+			"subTitle": "My last 10 pending Invoice Items",
+            "icon": {
+				"src": "sap-icon://monitor-payments"
+			}
+		},
+		"content": {
+            "data": {
+                "path": "/value/"
+            },
+			"row": {
+				"columns": [{
+						"title": "Invoice ID",
+						"value": "{InvoiceId}",
+						"identifier": true,
+                        "actions": [
+                            {
+                                "type": "Navigation",
+                                "parameters": {
+                                    "url": "https://{{parameters.datacenter}}.ariba.com/Buyer/Main/ad/webjumper?realm={{parameters.realm}}&itemClassName=ariba.invoicing.core.InvoiceReconciliation&itemUniqueName={InvoiceId}"
+                                }
+                            }
+                        ]
+					},
+					{
+						"title": "Description",
+						"value": "{=${Description}.length>30 ?${Description}.substring(0,30) +'...' :${Description} }"
+					},
+					{
+						"title": "Invoice Date Created",
+						"value": "{InvoiceDateCreated_day}"
+					},
+					{
+						"title": "Supplier Location ID",
+						"value": "{ShipFromLocation_LocationId}"
+					},
+					{
+						"title": "Amount Invoiced",
+						"value": "{OrigAmountInvoiced} {OrigCurrencyCode}"
+					},
+					{
+						"title": "Reconciliation Status",
+						"value": "{ReconciliationStatus}"
+					},
+					{
+						"title": "Invoice Status",
+						"value": "{InvoiceStatus}"
+					}
+				]
+			}
+		}
+	},
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

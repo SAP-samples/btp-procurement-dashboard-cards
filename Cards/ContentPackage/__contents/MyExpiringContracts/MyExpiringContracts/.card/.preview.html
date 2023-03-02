@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    var _oCardInfo = {
+        cardWrapperCSSPath : "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/style/previewwrapper.css",
+        cardMetaPath : "/home/user/projects/NexGenUICards/NexGen-Cards/Production/MyExpiringContracts/manifest.json",
+        cardMeta : JSON.parse(unescape("%7B%0A%09%22_version%22%3A%20%221.15.0%22%2C%0A%09%22sap.app%22%3A%20%7B%0A%09%09%22id%22%3A%20%22sap.ariba.MyExpiringContracts%22%2C%0A%09%09%22type%22%3A%20%22card%22%2C%0A%09%09%22title%22%3A%20%22My%20Expiring%20Contracts%22%2C%0A%09%09%22subTitle%22%3A%20%22SAP%20Ariba%20Contracts%20expiring%20in%20a%20month%22%2C%0A%09%09%22applicationVersion%22%3A%20%7B%0A%09%09%09%22version%22%3A%20%221.0.0%22%0A%09%09%7D%0A%09%7D%2C%0A%09%22sap.ui%22%3A%20%7B%0A%09%09%22technology%22%3A%20%22UI5%22%2C%0A%20%20%20%20%20%20%20%20%22deviceTypes%22%3A%20%7B%22desktop%22%3A%20true%2C%20%22phone%22%3A%20true%2C%20%22tablet%22%3A%20true%7D%2C%0A%09%09%22icons%22%3A%20%7B%0A%09%09%09%22icon%22%3A%20%22sap-icon%3A//table-view%22%0A%09%09%7D%0A%09%7D%2C%0A%09%22sap.card%22%3A%20%7B%0A%09%09%22type%22%3A%20%22Table%22%2C%0A%20%20%20%20%20%20%20%20%22designtime%22%3A%20%22dt/configuration%22%2C%0A%09%09%22header%22%3A%20%7B%0A%09%09%09%22title%22%3A%20%22My%20Expiring%20Contracts%22%2C%0A%09%09%09%22subTitle%22%3A%20%22Last%205%20expired%20contracts%22%2C%0A%09%09%09%22icon%22%3A%20%7B%0A%09%09%09%09%22src%22%3A%20%22sap-icon%3A//decision%22%0A%09%09%09%7D%0A%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%22data%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22request%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22method%22%3A%20%22GET%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22url%22%3A%20%22%7B%7Bdestinations.wzcd%7D%7D/getMyExpiringContracts%28%29%3Frealm%3D%7B%7Bparameters.realm%7D%7D%26user%3D%7B%7Bparameters.user%7D%7D%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22withCredentials%22%3A%20true%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%09%09%7D%2C%0A%20%20%20%20%20%20%20%20%22configuration%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%22parameters%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22realm%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22%3CrealmName%3E%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%09%09%09%09%09%22label%22%3A%20%22Realm%22%2C%0A%09%09%09%09%09%22description%22%3A%20%22The%20realm%20to%20connect%20to.%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22datacenter%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22s1%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%09%09%09%09%09%22label%22%3A%20%22Datacenter%22%2C%0A%09%09%09%09%09%22description%22%3A%20%22The%20datacenter%20the%20realm%20belongs%20to%20%28ie%3A%20s1%20for%20us%2C%20s1-eu%20for%20eu...%29%20%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22user%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%09%09%09%09%09%22label%22%3A%20%22User%20ID%22%2C%0A%09%09%09%09%09%22description%22%3A%20%22For%20Test%20purpose%20only%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22destinations%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22wzcd%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22name%22%3A%20%22Work-Zone-Cards-Data%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%2C%0A%09%09%22content%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22data%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22path%22%3A%20%22/value/%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%09%09%09%22row%22%3A%20%7B%0A%09%09%09%09%22columns%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%09%09%09%09%09%09%22title%22%3A%20%22ContractId%22%2C%0A%09%09%09%09%09%09%22value%22%3A%20%22%7BContractId%7D%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22identifier%22%3A%20true%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22actions%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22Navigation%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22parameters%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22url%22%3A%20%22https%3A//%7B%7Bparameters.datacenter%7D%7D.ariba.com/Sourcing/Main/ad/viewDocument%3FID%3D%7BContractId%7D%26realm%3D%7B%7Bparameters.realm%7D%7D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22title%22%3A%20%22Description%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22%7BDescription%7D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22title%22%3A%20%22Max%20Commitment%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22%7BMaxCommitment%7D%20%20%7BOrigCurrencyCode%7D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22title%22%3A%20%22Amount%20Left%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22%7BAmountLeft%7D%20%7BOrigCurrencyCode%7D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22title%22%3A%20%22Expiration%20Date%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22%7BExpirationDate_day%7D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22title%22%3A%20%22Staus%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22%7BStatus%7D%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22state%22%3A%20%22%7B%3D%20%24%7BStatus%7D%3D%3D%3D%27Closed%27%3F%27Success%27%3A%27Warning%27%7D%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%09%09%09%09%5D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%2C%0A%20%20%20%20%22sap.platform.mobilecards%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%22compatible%22%3A%20false%0A%20%20%20%20%7D%0A%7D")),
+        CardMetaError : "",
+        cardBasePath : "/home/user/projects/NexGenUICards/NexGen-Cards/Production/MyExpiringContracts/",
+        cardBaseRelativePath : "Production/MyExpiringContracts",
+        cardUseMeta: true,
+        cardWPBaseURL : "",//getWPBaseURL(),
+        cardDestinationBaseURL: "",//getWPBaseURL(true),
+        ui5Version: "1.87.0",
+        ui5Url: "https://sapui5.hana.ondemand.com/1.87.0/resources/sap-ui-core.js"
+    };
+
+    function getWPBaseURL(bDestination) {
+        var path = window.location.href;
+        path = bDestination?path.substring(0, path.indexOf("mini-browser")):path.substring(0, path.indexOf("mini-browser")+12);
+        return path;
+    }
+    function addSheetFile(path){
+        var fileref=parent.document.createElement("link");
+        fileref.id="cardpreviewwrapper";
+        fileref.rel="stylesheet";
+        fileref.type="text/css";
+        fileref.href=getWPBaseURL() + '/' + path;
+        fileref.media="screen";
+        var headobj=parent.document.getElementsByTagName('head')[0];
+        headobj.appendChild(fileref);
+    }
+    function delSheetFile(){
+        var headobj=parent.document.getElementsByTagName('head')[0];
+        var linkobj = parent.document.getElementById("cardpreviewwrapper");
+        if (headobj && linkobj) {
+            headobj.removeChild(linkobj);
+        }
+    }
+window.parent.addEventListener('message', event => {
+    if (typeof(event.data) == "string" || !event.data.data) return;
+    const message = event.data.data;
+    switch (message.cmd) {
+        case 'refreshPreview':
+            document.updateCard(message.data);
+            break;
+        default: break;
+    }
+});
+    document.loadCard = function()
+    {
+        _oCardInfo.cardWPBaseURL = getWPBaseURL();
+        _oCardInfo.cardDestinationBaseURL = getWPBaseURL(true);
+
+        addSheetFile(_oCardInfo.cardWrapperCSSPath);
+        var contentDoc=document.getElementById("previewframe").contentDocument;
+        var ui5Url = _oCardInfo.ui5Url; //"https://sapui5.hana.ondemand.com/" + _oCardInfo.ui5Version + "/resources/sap-ui-core.js";
+        contentDoc.loadCard(ui5Url, _oCardInfo);
+        //contentDoc.previewCard(_oCardInfo);
+    };
+
+    document.updateCard = function(data)
+    {
+        var meta = "{}", metaError = "";
+        try {
+            meta = JSON.parse(data.meta);
+        }catch(err) {
+            meta = "{}";
+            metaError = err.message;
+        }
+        _oCardInfo.cardMetaPath = data.path;
+        _oCardInfo.cardMeta = meta;
+        _oCardInfo.CardMetaError = metaError;
+        _oCardInfo.cardBasePath = data.cardBasePath;
+        _oCardInfo.cardBaseRelativePath = data.cardBaseRelativePath;
+        _oCardInfo.cardUseMeta = true;
+        _oCardInfo.cardWPBaseURL = getWPBaseURL();
+        _oCardInfo.cardDestinationBaseURL = getWPBaseURL(true);
+        if (data.ui5Version !== _oCardInfo.ui5Version) {
+            var iframe=document.getElementById("previewframe");
+            _oCardInfo.ui5Version = data.ui5Version;
+            iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html" + "?time="+new Date().getTime();
+            //iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html" + "?ui5Version="+_oCardInfo.ui5Version+"&time="+new Date().getTime();
+            return;
+        }
+        var contentDoc=document.getElementById("previewframe").contentDocument;
+        contentDoc.updateCard(_oCardInfo);
+    };
+    </script>
+</head>
+
+<body style="margin:0;"  onunload="unload()" >
+    <iframe id="previewframe" width="100%" style="display:block;border: none;"></iframe>
+    <script type="text/javascript">
+    var iframe=document.getElementById("previewframe");
+    iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html" + "?time="+new Date().getTime();
+    //iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html" + "?ui5Version="+_oCardInfo.ui5Version;
+    //iframe.src = pre + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html?cardBasePath=\"/home/user/projects/NexGenUICards/NexGen-Cards/Production/MyExpiringContracts/\"";
+    if (iframe.attachEvent){
+        iframe.attachEvent("onload", function(){
+            //var height=($.browser.msie||$.browser.opera)? iframe.document.body.scrollHeight:iframe.contentDocument.body.offsetHeight;
+            //var height=($.browser.msie||$.browser.opera)? document.body.scrollHeight:document.body.offsetHeight;
+            iframe.height = window.innerHeight;
+            document.loadCard();
+        });
+        iframe.attachEvent("onunload", function(){
+            delSheetFile();
+        });
+    } else {
+        iframe.onload = function(){
+            //var height=($.browser.msie||$.browser.opera)? iframe.document.body.scrollHeight:iframe.contentDocument.body.offsetHeight;
+            //var height=($.browser.msie||$.browser.opera)? document.body.scrollHeight:document.body.offsetHeight;
+            iframe.height = window.innerHeight;
+            document.loadCard();
+        };
+        iframe.onunload = function(){
+            delSheetFile();
+        };
+    }
+    window.onunload = function(){
+        //alert("window.onunload");
+        //delSheetFile();
+    };
+
+    </script>
+</body>
+</html>
