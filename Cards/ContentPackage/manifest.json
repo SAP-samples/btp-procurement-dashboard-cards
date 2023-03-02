@@ -1,0 +1,47 @@
+{
+  "sap.package": {
+    "id": "sap.Procurement",
+    "packageVersion": {
+      "version": "0.0.4",
+      "upgradeNotification": "all"
+    },
+    "i18n": "i18n/i18n.properties",
+    "icon": "sap-icon://accept",
+    "title": "{{PACKAGE_TITLE}}",
+    "subTitle": "{{PACKAGE_SUBTITLE}}",
+    "shortTitle": "{{PACKAGE_SHORTTITLE}}",
+    "info": "{{PACKAGE_INFO}}",
+    "description": "{{PACKAGE_DESCRIPTION}}",
+    "tags": {
+      "keywords": [
+        "{{PACKAGE_KEYWORD1}}",
+        "{{PACKAGE_KEYWORD2}}"
+      ]
+    },
+    "vendor": {
+      "name": "SAP Ariba",
+      "url": "https://sap.com"
+    },
+    "scope": "external",
+    "license": {
+      "text": "",
+      "url": ""
+    },
+    "homepage": {
+      "text": "SAP SE",
+      "url": "https://sap.com"
+    },
+    "support": {
+        "url": "https://support.sap.com"
+    },
+    "contents": [
+      "__BUILD__"
+    ],
+    "consumption": [],
+    "dependencies": {
+      "products": [],
+      "services": []
+    },
+    "destinations": []
+  }
+}

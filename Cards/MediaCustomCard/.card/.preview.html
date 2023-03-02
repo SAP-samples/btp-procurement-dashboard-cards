@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    var _oCardInfo = {
+        cardWrapperCSSPath : "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/style/previewwrapper.css",
+        cardMetaPath : "/home/user/projects/cards_git/UI5Cards_Procurement/Production/MediaCustomCard/manifest.json",
+        cardMeta : JSON.parse(unescape("%7B%0A%09%22_version%22%3A%20%221.14.0%22%2C%0A%09%22sap.app%22%3A%20%7B%0A%09%09%22id%22%3A%20%22sap.ariba.MediaCustomCard%22%2C%0A%09%09%22type%22%3A%20%22card%22%2C%0A%09%09%22title%22%3A%20%22Generic%20Media%20Custom%20Card%22%2C%0A%09%09%22subTitle%22%3A%20%22Access%20a%20specific%20URL%22%2C%0A%09%09%22applicationVersion%22%3A%20%7B%0A%09%09%09%22version%22%3A%20%221.0.0%22%0A%09%09%7D%0A%09%7D%2C%0A%09%22sap.ui%22%3A%20%7B%0A%09%09%22technology%22%3A%20%22UI5%22%2C%0A%20%20%20%20%20%20%20%20%22deviceTypes%22%3A%20%7B%22desktop%22%3A%20true%2C%20%22phone%22%3A%20true%2C%20%22tablet%22%3A%20true%7D%2C%0A%09%09%22icons%22%3A%20%7B%0A%09%09%09%22icon%22%3A%20%22sap-icon%3A//technical-object%22%0A%09%09%7D%0A%09%7D%2C%0A%09%22sap.ui5%22%3A%20%7B%0A%09%09%22rootView%22%3A%20%7B%20%0A%09%09%09%22viewName%22%3A%20%22sap.ariba.MediaCustomCard.View%22%2C%0A%09%09%09%22type%22%3A%20%22XML%22%2C%0A%09%09%09%22async%22%3A%20true%2C%0A%09%09%09%22id%22%3A%20%22app%22%0A%09%09%7D%2C%20%0A%09%09%22dependencies%22%3A%20%7B%0A%09%09%09%22minUI5Version%22%3A%20%221.38%22%2C%0A%09%09%09%22libs%22%3A%20%7B%0A%09%09%09%09%22sap.m%22%3A%20%7B%7D%0A%09%09%09%7D%20%0A%09%09%7D%0A%09%7D%2C%0A%09%22sap.card%22%3A%20%7B%0A%09%09%22type%22%3A%20%22Component%22%2C%0A%20%20%20%20%20%20%20%20%22designtime%22%3A%20%22dt/configuration%22%2C%0A%09%09%22headerPosition%22%3A%20%22Bottom%22%2C%0A%09%09%22header%22%3A%20%7B%0A%09%09%09%22title%22%3A%20%22%7B%7Bparameters.cardTitle%7D%7D%22%0A%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%22configuration%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22parameters%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22cardTitle%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22Non%20Catalogue%20GB%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22label%22%3A%20%22cardTitle%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22description%22%3A%20%22The%20card%20title.%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22redirectURL%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22https%3A//s1.ariba.com/gb/adhocCheckout%3Frealm%3Dferranet-t%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22label%22%3A%20%22redirectURL%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22description%22%3A%20%22The%20url%20to%20redirect%20to.%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22imageURL%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22https%3A//i.ibb.co/xzR6C8D/277919-277919-l-srgb-s-gl.jpg%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22label%22%3A%20%22imageURL%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22description%22%3A%20%22The%20url%20of%20the%20card%20picture.%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%09%7D%2C%0A%20%20%20%20%22sap.platform.mobilecards%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%22compatible%22%3A%20false%0A%20%20%20%20%7D%0A%7D")),
+        CardMetaError : "",
+        cardBasePath : "/home/user/projects/cards_git/UI5Cards_Procurement/Production/MediaCustomCard/",
+        cardBaseRelativePath : "UI5Cards_Procurement/Production/MediaCustomCard",
+        cardUseMeta: true,
+        cardWPBaseURL : "",//getWPBaseURL(),
+        cardDestinationBaseURL: "",//getWPBaseURL(true),
+        ui5Version: "1.87.0",
+        ui5Url: "https://sapui5.hana.ondemand.com/1.87.0/resources/sap-ui-core.js"
+    };
+
+    function getWPBaseURL(bDestination) {
+        var path = window.location.href;
+        path = bDestination?path.substring(0, path.indexOf("mini-browser")):path.substring(0, path.indexOf("mini-browser")+12);
+        return path;
+    }
+    function addSheetFile(path){
+        var fileref=parent.document.createElement("link");
+        fileref.id="cardpreviewwrapper";
+        fileref.rel="stylesheet";
+        fileref.type="text/css";
+        fileref.href=getWPBaseURL() + '/' + path;
+        fileref.media="screen";
+        var headobj=parent.document.getElementsByTagName('head')[0];
+        headobj.appendChild(fileref);
+    }
+    function delSheetFile(){
+        var headobj=parent.document.getElementsByTagName('head')[0];
+        var linkobj = parent.document.getElementById("cardpreviewwrapper");
+        if (headobj && linkobj) {
+            headobj.removeChild(linkobj);
+        }
+    }
+window.parent.addEventListener('message', event => {
+    if (typeof(event.data) == "string" || !event.data.data) return;
+    const message = event.data.data;
+    switch (message.cmd) {
+        case 'refreshPreview':
+            document.updateCard(message.data);
+            break;
+        default: break;
+    }
+});
+    document.loadCard = function()
+    {
+        _oCardInfo.cardWPBaseURL = getWPBaseURL();
+        _oCardInfo.cardDestinationBaseURL = getWPBaseURL(true);
+
+        addSheetFile(_oCardInfo.cardWrapperCSSPath);
+        var contentDoc=document.getElementById("previewframe").contentDocument;
+        var ui5Url = _oCardInfo.ui5Url; //"https://sapui5.hana.ondemand.com/" + _oCardInfo.ui5Version + "/resources/sap-ui-core.js";
+        contentDoc.loadCard(ui5Url, _oCardInfo);
+        //contentDoc.previewCard(_oCardInfo);
+    };
+
+    document.updateCard = function(data)
+    {
+        var meta = "{}", metaError = "";
+        try {
+            meta = JSON.parse(data.meta);
+        }catch(err) {
+            meta = "{}";
+            metaError = err.message;
+        }
+        _oCardInfo.cardMetaPath = data.path;
+        _oCardInfo.cardMeta = meta;
+        _oCardInfo.CardMetaError = metaError;
+        _oCardInfo.cardBasePath = data.cardBasePath;
+        _oCardInfo.cardBaseRelativePath = data.cardBaseRelativePath;
+        _oCardInfo.cardUseMeta = true;
+        _oCardInfo.cardWPBaseURL = getWPBaseURL();
+        _oCardInfo.cardDestinationBaseURL = getWPBaseURL(true);
+        if (data.ui5Version !== _oCardInfo.ui5Version) {
+            var iframe=document.getElementById("previewframe");
+            _oCardInfo.ui5Version = data.ui5Version;
+            iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html" + "?time="+new Date().getTime();
+            //iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html" + "?ui5Version="+_oCardInfo.ui5Version+"&time="+new Date().getTime();
+            return;
+        }
+        var contentDoc=document.getElementById("previewframe").contentDocument;
+        contentDoc.updateCard(_oCardInfo);
+    };
+    </script>
+</head>
+
+<body style="margin:0;"  onunload="unload()" >
+    <iframe id="previewframe" width="100%" style="display:block;border: none;"></iframe>
+    <script type="text/javascript">
+    var iframe=document.getElementById("previewframe");
+    iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html" + "?time="+new Date().getTime();
+    //iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html" + "?ui5Version="+_oCardInfo.ui5Version;
+    //iframe.src = pre + "/tmp/vscode-unpacked/uicard-dk-1.3.20210319.vsix/extension/resources/previewcard.html?cardBasePath=\"/home/user/projects/cards_git/UI5Cards_Procurement/Production/MediaCustomCard/\"";
+    if (iframe.attachEvent){
+        iframe.attachEvent("onload", function(){
+            //var height=($.browser.msie||$.browser.opera)? iframe.document.body.scrollHeight:iframe.contentDocument.body.offsetHeight;
+            //var height=($.browser.msie||$.browser.opera)? document.body.scrollHeight:document.body.offsetHeight;
+            iframe.height = window.innerHeight;
+            document.loadCard();
+        });
+        iframe.attachEvent("onunload", function(){
+            delSheetFile();
+        });
+    } else {
+        iframe.onload = function(){
+            //var height=($.browser.msie||$.browser.opera)? iframe.document.body.scrollHeight:iframe.contentDocument.body.offsetHeight;
+            //var height=($.browser.msie||$.browser.opera)? document.body.scrollHeight:document.body.offsetHeight;
+            iframe.height = window.innerHeight;
+            document.loadCard();
+        };
+        iframe.onunload = function(){
+            delSheetFile();
+        };
+    }
+    window.onunload = function(){
+        //alert("window.onunload");
+        //delSheetFile();
+    };
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+{
+    "CatalogSearch": {
+        "src": {
+            "package": "sap-ariba-CatalogSearch.zip",
+            "from": "../CatalogSearch",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "CatVsNonCatSpend": {
+        "src": {
+            "package": "sap-ariba-CatVsNonCatSpend.zip",
+            "from": "../CatVsNonCatSpend",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "ContingentWorkSpendByCostCenter": {
+        "src": {
+            "package": "sap-fieldglass-ContingentWorkSpendByCostCenter.zip",
+            "from": "../ContingentWorkSpendByCostCenter",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "ContractVsNonContract": {
+        "src": {
+            "package": "sap-ariba-ContractVsNonContract.zip",
+            "from": "../ContractVsNonContract",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "CreateContractWorkspace": {
+        "src": {
+            "package": "sap-ariba-CreateContractWorkspace.zip",
+            "from": "../CreateContractWorkspace",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "DiverseSupplierSearch": {
+        "src": {
+            "package": "sap-ariba-DiverseSupplierSearch.zip",
+            "from": "../DiverseSupplierSearch",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "EventsPerRegions": {
+        "src": {
+            "package": "sap-ariba-EventsPerRegions.zip",
+            "from": "../EventsPerRegions",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "GBCatalogSearch": {
+        "src": {
+            "package": "sap-ariba-GBCatalogSearch.zip",
+            "from": "../GBCatalogSearch",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "InvoicebyStatus": {
+        "src": {
+            "package": "sap-ariba-InvoicebyStatus.zip",
+            "from": "../InvoicebyStatus",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "InvoiceExceptions": {
+        "src": {
+            "package": "sap-ariba-InvoiceExceptions.zip",
+            "from": "../InvoiceExceptions",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "InvoicePaymentDuration": {
+        "src": {
+            "package": "sap-ariba-InvoicePaymentDuration.zip",
+            "from": "../InvoicePaymentDuration",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "InvoiceSearch": {
+        "src": {
+            "package": "sap-ariba-InvoiceSearch.zip",
+            "from": "../InvoiceSearch",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "MediaCustomCard": {
+        "src": {
+            "package": "sap-ariba-MediaCustomCard.zip",
+            "from": "../MediaCustomCard",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "MyConsumedContracts": {
+        "src": {
+            "package": "sap-ariba-MyConsumedContracts.zip",
+            "from": "../MyConsumedContracts",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "MyContractWorkspaces": {
+        "src": {
+            "package": "sap-ariba-MyContractWorkspaces.zip",
+            "from": "../MyContractWorkspaces",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "MyContractWorkspacesAPI": {
+        "src": {
+            "package": "sap-ariba-MyContractWorkspacesAPI.zip",
+            "from": "../MyContractWorkspacesAPI",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "MyExpiringContracts": {
+        "src": {
+            "package": "sap-ariba-MyExpiringContracts.zip",
+            "from": "../MyExpiringContracts",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "MyPendingInvoices": {
+        "src": {
+            "package": "sap-ariba-MyPendingInvoices.zip",
+            "from": "../MyPendingInvoices",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "MyRequisitions": {
+        "src": {
+            "package": "sap-ariba-MyRequisitions.zip",
+            "from": "../MyRequisitions",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "MySourcingProjects": {
+        "src": {
+            "package": "sap-ariba-MySourcingProjects.zip",
+            "from": "../MySourcingProjects",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "MySpendPerQuarter": {
+        "src": {
+            "package": "sap-ariba-MySpendPerQuarter.zip",
+            "from": "../MySpendPerQuarter",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "OpenJobPostings": {
+        "src": {
+            "package": "sap-fieldglass-OpenJobPostings.zip",
+            "from": "../OpenJobPostings",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "ProcurementContractSearch": {
+        "src": {
+            "package": "sap-ariba-ProcurementContractSearch.zip",
+            "from": "../ProcurementContractSearch",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "QuickLinks": {
+        "src": {
+            "package": "sap-ariba-QuickLinks.zip",
+            "from": "../QuickLinks",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    },
+    "SupplierParticipation": {
+        "src": {
+            "package": "sap-ariba-SupplierParticipation.zip",
+            "from": "../SupplierParticipation",
+            "build": "",
+            "manifest": "manifest.json",
+            "path": "./"
+        },
+        "type": "card"
+    }
+}

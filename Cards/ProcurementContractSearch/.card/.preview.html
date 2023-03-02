@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    var _oCardInfo = {
+        cardWrapperCSSPath : "/tmp/vscode-unpacked/uicard-dk-1.3.20220425.vsix/extension/resources/style/previewwrapper.css",
+        cardMetaPath : "/home/user/projects/NexGenUICards/NexGen-Cards/Production/ProcurementContractSearch/manifest.json",
+        cardMeta : JSON.parse(unescape("%7B%0A%09%22_version%22%3A%20%221.15.0%22%2C%0A%09%22sap.app%22%3A%20%7B%0A%09%09%22id%22%3A%20%22sap.ariba.ProcurementContractSearch%22%2C%0A%09%09%22type%22%3A%20%22card%22%2C%0A%09%09%22title%22%3A%20%22Procurement%20Contract%20Search%22%2C%0A%09%09%22subTitle%22%3A%20%22Contract%20Workspaces%22%2C%0A%09%09%22applicationVersion%22%3A%20%7B%0A%09%09%09%22version%22%3A%20%221.0.0%22%0A%09%09%7D%0A%09%7D%2C%0A%09%22sap.ui%22%3A%20%7B%0A%09%09%22technology%22%3A%20%22UI5%22%2C%0A%20%20%20%20%20%20%20%20%22deviceTypes%22%3A%20%7B%22desktop%22%3A%20true%2C%20%22phone%22%3A%20true%2C%20%22tablet%22%3A%20true%7D%2C%0A%09%09%22icons%22%3A%20%7B%0A%09%09%09%22icon%22%3A%20%22sap-icon%3A//search%22%0A%09%09%7D%0A%09%7D%2C%0A%09%22sap.ui5%22%3A%20%7B%0A%09%09%22rootView%22%3A%20%7B%0A%09%09%09%22viewName%22%3A%20%22sap.ariba.ProcurementContractSearch.View%22%2C%0A%09%09%09%22type%22%3A%20%22XML%22%2C%0A%09%09%09%22async%22%3A%20true%2C%0A%09%09%09%22id%22%3A%20%22app%22%0A%09%09%7D%2C%0A%09%09%22dependencies%22%3A%20%7B%0A%09%09%09%22minUI5Version%22%3A%20%221.38%22%2C%0A%09%09%09%22libs%22%3A%20%7B%0A%09%09%09%09%22sap.m%22%3A%20%7B%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%2C%0A%09%22sap.card%22%3A%20%7B%0A%09%09%22type%22%3A%20%22Component%22%2C%0A%20%20%20%20%20%20%20%20%22designtime%22%3A%20%22dt/configuration%22%2C%0A%20%20%20%20%20%20%20%20%22configuration%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22parameters%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22realm%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22%3CrealmName%3E%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22label%22%3A%20%22The%20realm%20to%20connect%20to.%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22datacenter%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22s1%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22label%22%3A%20%22The%20datacenter%20the%20realm%20belongs%20to%20%28ie%3A%20s1%20for%20us%2C%20s1-eu%20for%20eu...%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22searchResult%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%205%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22integer%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22label%22%3A%20%22Amount%20of%20Records%20displayed%20as%20the%20Search%20Result%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22user%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22label%22%3A%20%22UserID%20for%20selection%20on%20%27Select%20Mine%27%20%28For%20Test%20purpose%20only%29%22%2C%0A%09%09%09%09%09%22description%22%3A%20%22For%20Test%20purpose%20only%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22commodities%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22%5B%7B%5C%22CommodityName%5C%22%3A%5C%22Coffee%20and%20Tea%5C%22%2C%5C%22CommodityCode%5C%22%3A%5C%22502017%5C%22%7D%2C%7B%5C%22CommodityName%5C%22%3A%5C%22Software%5C%22%2C%5C%22CommodityCode%5C%22%3A%5C%224323%5C%22%7D%5D%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22label%22%3A%20%22Code%20List%20Commodity%20for%20the%20realm%22%2C%0A%09%09%09%09%09%22description%22%3A%20%22Code%20List%20Commodity%20for%20the%20realm.%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22departments%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22value%22%3A%20%22%5B%7B%5C%22ID%5C%22%3A%5C%2214%5C%22%2C%5C%22Function%5C%22%3A%5C%22Global%20Operations%5C%22%7D%2C%7B%5C%22ID%5C%22%3A%5C%2215%5C%22%2C%5C%22Function%5C%22%3A%5C%22Marketing%5C%22%7D%5D%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22type%22%3A%20%22string%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22label%22%3A%20%22Code%20List%20Departments%20for%20the%20realm%22%2C%0A%09%09%09%09%09%22description%22%3A%20%22Code%20List%20Departments%20for%20the%20realm.%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22destinations%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22wzcd%22%3A%20%7B%20%22name%22%3A%20%22Work-Zone-Cards-Data%22%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%22header%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22icon%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22src%22%3A%20%22sap-icon%3A//search%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22title%22%3A%20%22Procurement%20Contract%20Search%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22subTitle%22%3A%20%22Based%20on%20SAP%20Ariba%20Contract%20Workspaces%22%0A%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%2C%0A%20%20%20%20%22sap.platform.mobilecards%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%22compatible%22%3A%20false%0A%20%20%20%20%7D%0A%7D")),
+        CardMetaError : "",
+        cardBasePath : "/home/user/projects/NexGenUICards/NexGen-Cards/Production/ProcurementContractSearch/",
+        cardBaseRelativePath : "Production/ProcurementContractSearch",
+        cardUseMeta: true,
+        cardWPBaseURL : "",//getWPBaseURL(),
+        cardDestinationBaseURL: "",//getWPBaseURL(true),
+        ui5Version: "1.99.0",
+        ui5Url: "https://sapui5.hana.ondemand.com/1.99.0/resources/sap-ui-core.js"
+    };
+
+    function getWPBaseURL(bDestination) {
+        var path = window.location.href;
+        path = bDestination?path.substring(0, path.indexOf("mini-browser")):path.substring(0, path.indexOf("mini-browser")+12);
+        return path;
+    }
+    function addSheetFile(path){
+        var fileref=parent.document.createElement("link");
+        fileref.id="cardpreviewwrapper";
+        fileref.rel="stylesheet";
+        fileref.type="text/css";
+        fileref.href=getWPBaseURL() + '/' + path;
+        fileref.media="screen";
+        var headobj=parent.document.getElementsByTagName('head')[0];
+        headobj.appendChild(fileref);
+    }
+    function delSheetFile(){
+        var headobj=parent.document.getElementsByTagName('head')[0];
+        var linkobj = parent.document.getElementById("cardpreviewwrapper");
+        if (headobj && linkobj) {
+            headobj.removeChild(linkobj);
+        }
+    }
+window.parent.addEventListener('message', event => {
+    if (typeof(event.data) == "string" || !event.data.data) return;
+    const message = event.data.data;
+    switch (message.cmd) {
+        case 'refreshPreview':
+            document.updateCard(message.data);
+            break;
+        default: break;
+    }
+});
+    document.loadCard = function()
+    {
+        _oCardInfo.cardWPBaseURL = getWPBaseURL();
+        _oCardInfo.cardDestinationBaseURL = getWPBaseURL(true);
+
+        addSheetFile(_oCardInfo.cardWrapperCSSPath);
+        var contentDoc=document.getElementById("previewframe").contentDocument;
+        var ui5Url = _oCardInfo.ui5Url; //"https://sapui5.hana.ondemand.com/" + _oCardInfo.ui5Version + "/resources/sap-ui-core.js";
+        contentDoc.loadCard(ui5Url, _oCardInfo);
+        //contentDoc.previewCard(_oCardInfo);
+    };
+
+    document.updateCard = function(data)
+    {
+        var meta = "{}", metaError = "";
+        try {
+            meta = JSON.parse(data.meta);
+        }catch(err) {
+            meta = "{}";
+            metaError = err.message;
+        }
+        _oCardInfo.cardMetaPath = data.path;
+        _oCardInfo.cardMeta = meta;
+        _oCardInfo.CardMetaError = metaError;
+        _oCardInfo.cardBasePath = data.cardBasePath;
+        _oCardInfo.cardBaseRelativePath = data.cardBaseRelativePath;
+        _oCardInfo.cardUseMeta = true;
+        _oCardInfo.cardWPBaseURL = getWPBaseURL();
+        _oCardInfo.cardDestinationBaseURL = getWPBaseURL(true);
+        if (data.ui5Version !== _oCardInfo.ui5Version) {
+            var iframe=document.getElementById("previewframe");
+            _oCardInfo.ui5Version = data.ui5Version;
+            iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20220425.vsix/extension/resources/previewcard.html" + "?time="+new Date().getTime();
+            //iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20220425.vsix/extension/resources/previewcard.html" + "?ui5Version="+_oCardInfo.ui5Version+"&time="+new Date().getTime();
+            return;
+        }
+        var contentDoc=document.getElementById("previewframe").contentDocument;
+        contentDoc.updateCard(_oCardInfo);
+    };
+    </script>
+</head>
+
+<body style="margin:0;"  onunload="unload()" >
+    <iframe id="previewframe" width="100%" style="display:block;border: none;"></iframe>
+    <script type="text/javascript">
+    var iframe=document.getElementById("previewframe");
+    iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20220425.vsix/extension/resources/previewcard.html" + "?time="+new Date().getTime();
+    //iframe.src = getWPBaseURL() + '/' + "/tmp/vscode-unpacked/uicard-dk-1.3.20220425.vsix/extension/resources/previewcard.html" + "?ui5Version="+_oCardInfo.ui5Version;
+    //iframe.src = pre + "/tmp/vscode-unpacked/uicard-dk-1.3.20220425.vsix/extension/resources/previewcard.html?cardBasePath=\"/home/user/projects/NexGenUICards/NexGen-Cards/Production/ProcurementContractSearch/\"";
+    if (iframe.attachEvent){
+        iframe.attachEvent("onload", function(){
+            //var height=($.browser.msie||$.browser.opera)? iframe.document.body.scrollHeight:iframe.contentDocument.body.offsetHeight;
+            //var height=($.browser.msie||$.browser.opera)? document.body.scrollHeight:document.body.offsetHeight;
+            iframe.height = window.innerHeight;
+            document.loadCard();
+        });
+        iframe.attachEvent("onunload", function(){
+            delSheetFile();
+        });
+    } else {
+        iframe.onload = function(){
+            //var height=($.browser.msie||$.browser.opera)? iframe.document.body.scrollHeight:iframe.contentDocument.body.offsetHeight;
+            //var height=($.browser.msie||$.browser.opera)? document.body.scrollHeight:document.body.offsetHeight;
+            iframe.height = window.innerHeight;
+            document.loadCard();
+        };
+        iframe.onunload = function(){
+            delSheetFile();
+        };
+    }
+    window.onunload = function(){
+        //alert("window.onunload");
+        //delSheetFile();
+    };
+
+    </script>
+</body>
+</html>

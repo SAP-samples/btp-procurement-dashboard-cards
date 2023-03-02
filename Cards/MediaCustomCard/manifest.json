@@ -1,0 +1,66 @@
+{
+	"_version": "1.14.0",
+	"sap.app": {
+		"id": "sap.ariba.MediaCustomCard",
+		"type": "card",
+		"title": "Generic Media Custom Card",
+		"subTitle": "Access a specific URL",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://technical-object"
+		}
+	},
+	"sap.ui5": {
+		"rootView": { 
+			"viewName": "sap.ariba.MediaCustomCard.View",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		}, 
+		"dependencies": {
+			"minUI5Version": "1.38",
+			"libs": {
+				"sap.m": {}
+			} 
+		}
+	},
+	"sap.card": {
+		"type": "Component",
+        "designtime": "dt/configuration",
+		"headerPosition": "Bottom",
+		"header": {
+			"title": "{{parameters.cardTitle}}"
+        },
+        "configuration": {
+            "parameters": {
+                "cardTitle": {
+                    "value": "Non Catalogue GB",
+                    "type": "string",
+                    "label": "cardTitle",
+                    "description": "The card title."
+                },
+                "redirectURL": {
+                    "value": "<url>",
+                    "type": "string",
+                    "label": "redirectURL",
+                    "description": "The url to redirect to."
+                },
+                "imageURL": {
+                    "value": "<image url>",
+                    "type": "string",
+                    "label": "imageURL",
+                    "description": "The url of the card picture."
+                }
+            }
+        }
+	},
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}
