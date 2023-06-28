@@ -15,7 +15,7 @@ Please see the pre-requisites and the required BTP services in the [Define Your 
 
 
 ## Deploy the Cards
-You can upload the content package into SAP Build Work Zone. You find the content package [here](https://github.com/SAP-samples/btp-procurement-dashboard-cards/tree/main/Cards/ContentPackage)
+You can upload the content package into SAP Build Work Zone, advanced edition. You find the content package [here](https://github.com/SAP-samples/btp-procurement-dashboard-cards/tree/main/Cards/ContentPackage). An instruction of how to upload the content package into your SAP Build Work Zone, advanced edition instance can be found [here](https://help.sap.com/docs/build-work-zone-advanced-edition/sap-build-work-zone-advanced-edition/upload-content-package?locale=en-US).  
 
 
 ## Known Issues
